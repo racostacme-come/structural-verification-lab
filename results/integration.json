@@ -1,0 +1,37 @@
+{
+  "experiment": "common-cantilever",
+  "units": "SI",
+  "rows": [
+    {
+      "elements": 4,
+      "buckling_relative_error": 3.2766085597879524e-05,
+      "reduced_compliance_relative_error": 0.015623781344271448,
+      "full_compliance_relative_error": 0.9950327962809654,
+      "dimensionless_product": 0.8096425139742055
+    },
+    {
+      "elements": 8,
+      "buckling_relative_error": 2.060209971954663e-06,
+      "reduced_compliance_relative_error": 0.0039059453256630183,
+      "full_compliance_relative_error": 0.980422915228709,
+      "dimensionless_product": 0.8192559594193395
+    },
+    {
+      "elements": 16,
+      "buckling_relative_error": 1.2896047096866425e-07,
+      "reduced_compliance_relative_error": 0.0009764863563451742,
+      "full_compliance_relative_error": 0.9260356783026387,
+      "dimensionless_product": 0.8216639489056158
+    },
+    {
+      "elements": 32,
+      "buckling_relative_error": 7.919176869819466e-09,
+      "reduced_compliance_relative_error": 0.00024412153088804178,
+      "full_compliance_relative_error": 0.7578697191611972,
+      "dimensionless_product": 0.8222662423634913
+    }
+  ],
+  "product_reference": 0.8224670334241132,
+  "identity": "P_Euler * (C_Timoshenko - L/(kGA)) / L = pi^2/12",
+  "scope": "Linear elastic slender cantilever; no nonlinear stability or physical validation."
+}

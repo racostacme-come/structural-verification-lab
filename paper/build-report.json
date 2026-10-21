@@ -1,0 +1,11 @@
+{
+  "pages": 2,
+  "sha256": {
+    "paper/paper.tex": "88199cefacfad610a862c4f6bdd2cc9eca30e50cf0f977d0740557e21d63ca0d",
+    "results/integration.json": "474b4a5cb67d584ba57e5733b82919eea119171470fe7e67fc674ffdb5fd0e0e",
+    "results/table.tex": "291f64a718dd07649093d01a6c43c38ed2ae612f1f101cb99ed54c680c2866a3",
+    "integration.py": "3f0af83997872782342d06a8e6006e653e5ab6a149003e2027d3cfc8a3834c31",
+    "suite.json": "3901154016596c04b825da72f2bd55f01e84523bd9c41e83172e2376819c1ee8",
+    "paper/paper.pdf": "4ed37de8606dc31a76bac700b6001eb5df1a44537d01cdd36f38d519a87e14fe"
+  }
+}

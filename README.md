@@ -1,0 +1,55 @@
+# Structural Verification Lab
+
+Beam discretization, stability, nonlinear equilibrium, plasticity, adaptive meshes and boundary enforcement.
+
+This major project integrates 6 previously independent research implementations into one reproducible laboratory. Full Python and C++ source, tests, datasets, documentation, licenses and component papers are included under `modules/`; no submodule downloads are required.
+
+## Start here
+
+Python 3.11+ (CI uses 3.12), Git, internet for initial dependency installation, and a C++17 compiler are required. On Windows use Visual Studio 2022 with Desktop development with C++ and a Windows SDK. On Linux use GCC or Clang. Use a fresh virtual environment.
+
+```sh
+python -m venv .venv
+# Windows: .venv\Scripts\activate
+# Linux/macOS: source .venv/bin/activate
+python suite.py verify
+python suite.py install
+python suite.py test
+python suite.py experiment
+```
+
+The runner stops on install failure and reports every module's test outcome. Tests execute in separate processes to avoid duplicate test-file/import names. `validation/tests.json` contains the actual outputs; `results/integration.json` records the connected experiment. Rerunning overwrites only these generated reports. For Windows builds, if compiler discovery fails, use a Visual Studio developer shell or set `CMAKE_GENERATOR=Visual Studio 17 2022`.
+
+## Included components
+
+| Component | Implementation and original paper |
+| --- | --- |
+| shearscope | [Source and usage](modules/shearscope/README.md), [paper](modules/shearscope/paper/paper.pdf) |
+| bucklemap | [Source and usage](modules/bucklemap/README.md), [paper](modules/bucklemap/paper/paper.pdf) |
+| foldtrace | [Source and usage](modules/foldtrace/README.md), [paper](modules/foldtrace/paper/paper.pdf) |
+| yieldledger | [Source and usage](modules/yieldledger/README.md), [paper](modules/yieldledger/paper/paper.pdf) |
+| meshbeacon | [Source and usage](modules/meshbeacon/README.md), [paper](modules/meshbeacon/paper/paper.pdf) |
+| boundarybalance | [Source and usage](modules/boundarybalance/README.md), [paper](modules/boundarybalance/paper/paper.pdf) |
+
+## What is integrated
+
+A common cantilever geometry and SI material definition connects ShearScope compliance and BuckleMap stability. A dimensionless identity tests the handoff of length, bending rigidity and boundary conditions. Full versus reduced quadrature and mesh refinement expose different discretization errors. The remaining nonlinear, plasticity, mesh and boundary modules provide complementary verification methods through the same build/test interface.
+
+This is a modular integration, not a universal multiphysics solver. Component APIs retain their explicit assumptions and units. Not every module is physically coupled to every other module.
+
+## Paper and evidence
+
+Read the new [synthesis paper](paper/paper.pdf) and [LaTeX source](paper/paper.tex).
+The component papers are retained as detailed supporting studies. New numerical claims are based on the connected experiment, not on simply adding together earlier performance claims.
+
+Compile with Tectonic or pdfLaTeX:
+```sh
+python suite.py paper --engine tectonic
+```
+The command rejects unresolved references, overfull boxes and more than five pages. CI independently builds the paper. [Architecture](docs/architecture.md), [source provenance](suite.json), and [development roadmap](ROADMAP.md) describe scope and future work.
+
+## Provenance and development
+
+Imported snapshots are pinned to original Git commits in `suite.json`, with SHA-256 for every imported file. `verify` detects unrecorded changes. Original repositories and histories remain available; this repository starts a new integration history. Intentional module changes require a documented patch record and manifest refresh. MIT notices are retained for every component; the integration layer is also MIT licensed.
+
+CI runs all component Python tests and the integration test on Linux and Windows. C++ Python extensions are built during install; component native-only/sanitizer checks remain documented in their original workflows and are not claimed as re-run by the root test command. Recorded results are synthetic numerical verification, not experimental physical validation.
