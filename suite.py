@@ -45,7 +45,7 @@ def test():
     print(result.stdout)
     reports.append({"module": "integration", "returncode": result.returncode, "output": result.stdout})
     (ROOT / "validation").mkdir(exist_ok=True)
-    (ROOT / "validation/tests.json").write_text(json.dumps(reports, indent=2)+"\n", encoding="utf-8")
+    (ROOT / "validation/tests.json").write_text(json.dumps(reports, indent=2)+"\n", encoding="utf-8", newline="\n")
     if any(r["returncode"] for r in reports):
         raise SystemExit("One or more test suites failed; inspect validation/tests.json")
 
@@ -53,10 +53,38 @@ def experiment():
     from integration import experiment
     data = experiment()
     (ROOT / "results").mkdir(exist_ok=True)
-    (ROOT / "results/integration.json").write_text(json.dumps(data, indent=2, allow_nan=False)+"\n", encoding="utf-8")
+    (ROOT / "results/integration.json").write_text(json.dumps(data, indent=2, allow_nan=False)+"\n", encoding="utf-8", newline="\n")
     print(json.dumps(data, indent=2))
     from paper_table import write_table
     write_table(data, ROOT / "results/table.tex")
+
+def native(build_root=None):
+    """Build and execute the four native C++17 invariant checks."""
+    reports = []
+    build_root = Path(build_root).absolute() if build_root else ROOT / "build" / "native"
+    for name in ("shearscope", "bucklemap", "foldtrace", "yieldledger"):
+        build = build_root / name
+        commands = [
+            ["cmake", "-S", str(ROOT / "modules" / name), "-B", str(build),
+             f"-D{name.upper()}_PYTHON=OFF", "-DBUILD_TESTING=ON",
+             "-DCMAKE_BUILD_TYPE=Release"],
+            ["cmake", "--build", str(build), "--config", "Release"],
+            ["ctest", "--test-dir", str(build), "-C", "Release",
+             "--output-on-failure", "--no-tests=error"],
+        ]
+        for command in commands:
+            result = subprocess.run(command, text=True, stdout=subprocess.PIPE,
+                                    stderr=subprocess.STDOUT)
+            print(result.stdout)
+            reports.append({"module": name, "command": command,
+                            "returncode": result.returncode, "output": result.stdout})
+            if result.returncode:
+                break
+    (ROOT / "validation").mkdir(exist_ok=True)
+    (ROOT / "validation/native.json").write_text(
+        json.dumps(reports, indent=2)+"\n", encoding="utf-8", newline="\n")
+    if any(r["returncode"] for r in reports):
+        raise SystemExit("Native validation failed; inspect validation/native.json")
 
 def paper(engine):
     from pypdf import PdfReader
@@ -77,15 +105,18 @@ def paper(engine):
         raise SystemExit(f"Expected 1-5 pages, got {pages}")
     inputs = ["paper/paper.tex", "results/integration.json", "results/table.tex", "integration.py", "suite.json", "paper/paper.pdf"]
     report = {"pages": pages, "sha256": {p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in inputs}}
-    (ROOT/"paper/build-report.json").write_text(json.dumps(report, indent=2)+"\n", encoding="utf-8")
+    (ROOT/"paper/build-report.json").write_text(json.dumps(report, indent=2)+"\n", encoding="utf-8", newline="\n")
     print(f"Compiled and checked {pages} pages.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=["verify", "install", "test", "experiment", "paper"])
+    parser.add_argument("command", choices=["verify", "install", "test", "native", "experiment", "paper"])
     parser.add_argument("--engine")
+    parser.add_argument("--build-root", help="Native CMake build directory; use a short path on Windows")
     args = parser.parse_args()
     if args.command == "paper":
         paper(args.engine)
+    elif args.command == "native":
+        native(args.build_root)
     else:
         globals()[args.command]()

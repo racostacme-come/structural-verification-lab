@@ -15,10 +15,13 @@ python -m venv .venv
 python suite.py verify
 python suite.py install
 python suite.py test
+python suite.py native
 python suite.py experiment
 ```
 
 The runner stops on install failure and reports every module's test outcome. Tests execute in separate processes to avoid duplicate test-file/import names. `validation/tests.json` contains the actual outputs; `results/integration.json` records the connected experiment. Rerunning overwrites only these generated reports. For Windows builds, if compiler discovery fails, use a Visual Studio developer shell or set `CMAKE_GENERATOR=Visual Studio 17 2022`.
+
+Deep Windows checkouts can exceed MSBuild's path limit during compiler detection. Pass `python suite.py native --build-root <short-build-directory>` to keep generated paths short; choose an empty build directory for this suite.
 
 ## Included components
 
@@ -50,6 +53,6 @@ The command rejects unresolved references, overfull boxes and more than five pag
 
 ## Provenance and development
 
-Imported snapshots are pinned to original Git commits in `suite.json`, with SHA-256 for every imported file. `verify` detects unrecorded changes. Original repositories and histories remain available; this repository starts a new integration history. Intentional module changes require a documented patch record and manifest refresh. MIT notices are retained for every component; the integration layer is also MIT licensed.
+Imported snapshots are pinned to original Git commits in `suite.json`, with SHA-256 for every imported file. `verify` detects unrecorded changes. Original repositories and histories remain available; this repository starts a new integration history. Intentional module changes require a documented patch record and manifest refresh. [Provenance repair](docs/provenance.md) explains canonical source bytes and the explicit MeshBeacon attributes patch. MIT notices are retained for every component; the integration layer is also MIT licensed.
 
-CI runs all component Python tests and the integration test on Linux and Windows. C++ Python extensions are built during install; component native-only/sanitizer checks remain documented in their original workflows and are not claimed as re-run by the root test command. Recorded results are synthetic numerical verification, not experimental physical validation.
+CI runs all component Python tests, integration checks, and the four native C++17 invariant tests on Linux and Windows. C++ Python extensions are built during install. The separate `native` command writes commands, return codes and compiler/CTest output to `validation/native.json`. Independent integration tests check modulus scaling, geometrically similar beams and refinement toward analytical continuum limits. Sanitizers and full historical reproduction campaigns are outside this gate. Recorded results are synthetic numerical verification, not experimental physical validation.
