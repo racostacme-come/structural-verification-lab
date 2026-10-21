@@ -1,0 +1,79 @@
+[
+  {
+    "module": "meshbeacon",
+    "path": ".gitattributes",
+    "previous_archive_sha256": "87b4022f2001f9563c0aaacf30eb758dd9c4a3bc612648e1bab10187d04bd80c",
+    "canonical_source_sha256": "0420c247f88400e47328d71db0bf3fe4ef76fdf0c83605dedae4c8fcc4daab4a",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": ".gitignore",
+    "previous_archive_sha256": "f605c5508e79a742f64bc03fb122897dcf0cfff209bb4fcb86c79935a296ece8",
+    "canonical_source_sha256": "2bf42ec5a36632a774e100e05cdfb4310c75be77219352ffe7aebe071536e51f",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": "LICENSE",
+    "previous_archive_sha256": "5de2f431ca981980ac5c5c89a96cf34dabc4b625ebd9f079c0f0ed2bbeb5a3b7",
+    "canonical_source_sha256": "db5eb9944f19975ce0b6dc4b557b60548d4983eef49e204b734dc2464d756a85",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": "pyproject.toml",
+    "previous_archive_sha256": "a656e2b3d4dc68e5044e415e2e5a1ed1e757f05935487df996eb0822649353d5",
+    "canonical_source_sha256": "7b8c0b114775ea4bd50d8b37515c833d018dd53ea8dd184914028121e25bc925",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": "requirements-repro.txt",
+    "previous_archive_sha256": "4fd5972217d282f12d1913b2b21f55cd0040e57b842b12fe0b67cbaf02db7f0a",
+    "canonical_source_sha256": "25a6c54514dce45e4e821a6d271b42c474977141df9354f70ab84464fc3a7d2f",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": "paper/.gitignore",
+    "previous_archive_sha256": "be091810b9a0f91199ea4b81d84af819934cdff588c5c41c0e97fb1fbd0a4a9f",
+    "canonical_source_sha256": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": "paper/paper.tex",
+    "previous_archive_sha256": "a84c48a5c9b568698d87efe2cd4493c3cdbdf79e102f25776f81365b2483fe5f",
+    "canonical_source_sha256": "3050951565389590e58bfecc4f8c7bf40593ea4269a94cf332741322b9b17ca8",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": "paper/validation.json",
+    "previous_archive_sha256": "c27137ed94f8d28c5bab35666101a1b5fcdf95d3b5dc03f54990cf46f4ba895a",
+    "canonical_source_sha256": "eb069a8085d11dc6be7b7f8e7b0f961a52539a8a3265a2e6c845c795b1010922",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": "results/adaptive_nodes.csv",
+    "previous_archive_sha256": "bfa2b780ca4cc845f81c71af221112094076fa14b9ba1ad0a15a7a8f9ede7e75",
+    "canonical_source_sha256": "6c83012ea9d9fc805ab9d54393828597176196f1a8a00da98f474abf4d357dbc",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": "results/convergence.csv",
+    "previous_archive_sha256": "61d36a17986b98e4b75cc939ff242d1b8832c34c313cdc0ebeb018bdc557bb34",
+    "canonical_source_sha256": "b834415de5828130fbd2a835ea9678a73b94e6f80fe62e7ef0d9b5122ac4b96d",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  },
+  {
+    "module": "meshbeacon",
+    "path": "results/validation.json",
+    "previous_archive_sha256": "1cee4967ed7ca4ccb1a3c456d16ae18a09d4ceeafae3cd6bc9de39c77c51a17d",
+    "canonical_source_sha256": "4088753647db7b0974c145e1a23d5815d9fb7dc156c3f47e34a6dac549be5964",
+    "reason": "Archive CRLF conversion removed; bytes match original pinned Git blob."
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "module": "shearscope",
+    "command": [
+      "cmake",
+      "-S",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\modules\\shearscope",
+      "-B",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\shearscope",
+      "-DSHEARSCOPE_PYTHON=OFF",
+      "-DBUILD_TESTING=ON",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    "returncode": 0,
+    "output": "-- Building for: Visual Studio 17 2022\n-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- The CXX compiler identification is MSVC 19.44.35219.0\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Configuring done (3.9s)\n-- Generating done (0.1s)\nCMake Warning (unused-cli):\n  Manually-specified variables were not used by the project:\n\n    CMAKE_BUILD_TYPE\n\n\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n"
+  },
+  {
+    "module": "shearscope",
+    "command": [
+      "cmake",
+      "--build",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\shearscope",
+      "--config",
+      "Release"
+    ],
+    "returncode": 0,
+    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/shearscope/CMakeLists.txt\n  test_element.cpp\n  test_element.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\shearscope\\Release\\test_element.exe\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/shearscope/CMakeLists.txt\n"
+  },
+  {
+    "module": "shearscope",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\shearscope",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "--no-tests=error"
+    ],
+    "returncode": 0,
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.07 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.12 sec\n"
+  },
+  {
+    "module": "bucklemap",
+    "command": [
+      "cmake",
+      "-S",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\modules\\bucklemap",
+      "-B",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\bucklemap",
+      "-DBUCKLEMAP_PYTHON=OFF",
+      "-DBUILD_TESTING=ON",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    "returncode": 0,
+    "output": "-- Building for: Visual Studio 17 2022\n-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- The CXX compiler identification is MSVC 19.44.35219.0\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Configuring done (2.5s)\n-- Generating done (0.0s)\nCMake Warning (unused-cli):\n  Manually-specified variables were not used by the project:\n\n    CMAKE_BUILD_TYPE\n\n\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n"
+  },
+  {
+    "module": "bucklemap",
+    "command": [
+      "cmake",
+      "--build",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\bucklemap",
+      "--config",
+      "Release"
+    ],
+    "returncode": 0,
+    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/bucklemap/CMakeLists.txt\n  test_beam.cpp\n  test_beam.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\bucklemap\\Release\\test_beam.exe\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/bucklemap/CMakeLists.txt\n"
+  },
+  {
+    "module": "bucklemap",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\bucklemap",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "--no-tests=error"
+    ],
+    "returncode": 0,
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.07 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.14 sec\n"
+  },
+  {
+    "module": "foldtrace",
+    "command": [
+      "cmake",
+      "-S",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\modules\\foldtrace",
+      "-B",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\foldtrace",
+      "-DFOLDTRACE_PYTHON=OFF",
+      "-DBUILD_TESTING=ON",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    "returncode": 0,
+    "output": "-- Building for: Visual Studio 17 2022\n-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- The CXX compiler identification is MSVC 19.44.35219.0\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Configuring done (2.5s)\n-- Generating done (0.0s)\nCMake Warning (unused-cli):\n  Manually-specified variables were not used by the project:\n\n    CMAKE_BUILD_TYPE\n\n\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n"
+  },
+  {
+    "module": "foldtrace",
+    "command": [
+      "cmake",
+      "--build",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\foldtrace",
+      "--config",
+      "Release"
+    ],
+    "returncode": 0,
+    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/foldtrace/CMakeLists.txt\n  test_continuation.cpp\n  test_continuation.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\foldtrace\\Release\\test_continuation.exe\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/foldtrace/CMakeLists.txt\n"
+  },
+  {
+    "module": "foldtrace",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\foldtrace",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "--no-tests=error"
+    ],
+    "returncode": 0,
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n    Start 1: continuation_invariants\n1/1 Test #1: continuation_invariants ..........   Passed    0.07 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.12 sec\n"
+  },
+  {
+    "module": "yieldledger",
+    "command": [
+      "cmake",
+      "-S",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\modules\\yieldledger",
+      "-B",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\yieldledger",
+      "-DYIELDLEDGER_PYTHON=OFF",
+      "-DBUILD_TESTING=ON",
+      "-DCMAKE_BUILD_TYPE=Release"
+    ],
+    "returncode": 0,
+    "output": "-- Building for: Visual Studio 17 2022\n-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- The CXX compiler identification is MSVC 19.44.35219.0\n-- Detecting CXX compiler ABI info\n-- Detecting CXX compiler ABI info - done\n-- Check for working CXX compiler: C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.44.35207/bin/Hostx64/x64/cl.exe - skipped\n-- Detecting CXX compile features\n-- Detecting CXX compile features - done\n-- Configuring done (2.5s)\n-- Generating done (0.0s)\nCMake Warning (unused-cli):\n  Manually-specified variables were not used by the project:\n\n    CMAKE_BUILD_TYPE\n\n\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/yieldledger\n"
+  },
+  {
+    "module": "yieldledger",
+    "command": [
+      "cmake",
+      "--build",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\yieldledger",
+      "--config",
+      "Release"
+    ],
+    "returncode": 0,
+    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/yieldledger/CMakeLists.txt\n  test_material.cpp\n  test_material.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\yieldledger\\Release\\test_material.exe\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/yieldledger/CMakeLists.txt\n"
+  },
+  {
+    "module": "yieldledger",
+    "command": [
+      "ctest",
+      "--test-dir",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\yieldledger",
+      "-C",
+      "Release",
+      "--output-on-failure",
+      "--no-tests=error"
+    ],
+    "returncode": 0,
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/yieldledger\n    Start 1: material_invariants\n1/1 Test #1: material_invariants ..............   Passed    0.07 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.13 sec\n"
+  }
+]
