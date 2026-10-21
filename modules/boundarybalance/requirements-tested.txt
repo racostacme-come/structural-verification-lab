@@ -1,0 +1,8 @@
+# Direct dependency versions used locally with Python 3.14 on Windows.
+numpy==2.5.3
+scipy==1.18.1
+matplotlib==3.11.2
+pytest==9.1.1
+ruff==0.16.10
+build==1.6.1
+pypdf==6.19.0

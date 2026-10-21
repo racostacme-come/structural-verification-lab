@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "pages": 3,
+  "page_limit": 5,
+  "engine": "tectonic",
+  "overfull_boxes": 0,
+  "undefined_references": 0,
+  "inputs_sha256": {
+    "paper/paper.tex": "0807da6724fc5ecdaffc285497ccf60fbe1c6bb153f7fd50e078f1187b01c680",
+    "paper/figure.pdf": "15455380c015cb988683ae23bf3a58587a966df4d2e2bce1337a5a8489bd022e",
+    "paper/plot.py": "261a4a5fe637ce7d9d3462c88d2cf9354a5507243a38f75993a7c65ecf873ccf",
+    "results/locking.csv": "20d260490cfc7557900e2ee116658463e8166db52752f5f7111396c770887e2e",
+    "results/modes.csv": "1708449648afd21ccf520cf211ffcfa0cf6fc560b2aa44a863d9ade14204dbff",
+    "results/summary.json": "5ec8901524b9edc74d0d62caf8eee6b46cc7614b2e217108a506ab06ec552599"
+  }
+}

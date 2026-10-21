@@ -1,0 +1,29 @@
+{
+  "ratio": 0.2,
+  "points": 23,
+  "stop_reason": "target_reached",
+  "rejected_steps": 0,
+  "load_scale": 0.04000000000000001,
+  "max_scaled_equilibrium_residual": 7.283453354323121e-13,
+  "max_hyperplane_residual": 1.717376241217039e-16,
+  "max_independent_force_error": 2.915983426943214e-14,
+  "analytical_fold_q": [
+    0.42642777655779807,
+    1.573572223442202
+  ],
+  "numerical_fold_q": [
+    0.42642777655780106,
+    1.5735722234421987
+  ],
+  "max_fold_location_error": 3.3306690738754696e-15,
+  "fold_loads": [
+    0.007547868508312872,
+    -0.007547868508312874
+  ],
+  "interpolation_orders": [
+    2.02509090769834,
+    2.002724499765741,
+    2.0014646567605956
+  ],
+  "note": "Static symmetric equilibrium only; unstable states are not a dynamic trajectory."
+}

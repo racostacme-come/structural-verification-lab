@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "pages": 4,
+  "page_limit": 5,
+  "engine": "tectonic",
+  "overfull_boxes": 0,
+  "undefined_references": 0,
+  "inputs_sha256": {
+    "paper/paper.tex": "002740c69f3dfd7d01d5a907a9350ce87bc50102fdeaf5bfbf3b2e889efd7856",
+    "paper/numbers.tex": "8b846a28ecc63cb178b47d5e310dca65ab85ea99be44bc09a7f17d44e98d6a36",
+    "paper/build.py": "fbf0b88fac5173fb199538299723d81535b0c9be6d3500d13f41cf180f0eddcc",
+    "results/overview.pdf": "dc9a5c38d23d5894ea9a867b37bdc56a020d79be1cdb00847b50c32cc2027a4c",
+    "src/yieldledger/__init__.py": "745afffe4bf8cb6c6d0a65619048e9b108e9514ce1cc823e384ef4a77ad6f218",
+    "src/yieldledger/bar.py": "ae8ae77c0d080d713d4cbd2d6e25f2992c32b8fb7549da05c4e8eae7ced0c5ee",
+    "src/yieldledger/cli.py": "7a882e9d51b9755c5a7b6a10e7576069524a0aba77884da47a0ba1df9bc0c2bc",
+    "src/yieldledger/experiments.py": "b101bbdde11a0c13bd3569d5054a6995bffc142f2986bdb422e211d0ead243fc",
+    "src/yieldledger/ledger.py": "a128684fb8812eb15201d6d7a230af8918e9f8787267eebdb2005bfe27983f8a",
+    "cpp/material.hpp": "b41e5c4fbd2a584f8eb69b4e5aef7f6375774bd033a19f3b8856840d8a58d7a9",
+    "cpp/bindings.cpp": "92d4f2617a15e53d9717642ae2bfdda450f8393835d29c6d45a96db7447f89b1",
+    "cpp/test_material.cpp": "4e5663eaf85fdf7fbbdb667369df7f7086cdbbc0d6792f68c33506e604062e4c",
+    "results/cycle.csv": "9f70f954594558ed336b0f0d752824b01032fd7b85e9fbd84612dde2c4e67946",
+    "results/mesh.csv": "3d5fd668065745a5cb52323465eba8342b02fadba730a060d6301db89fc59f52",
+    "results/newton.csv": "712f019820273fa6d8b219bf321c1b1708ff9660039db18828f56d2e649ce3d1",
+    "results/refinement.csv": "db0145d99b170281e4fa3b8c0281000944a4ab3bf4a32dc8448a64871c62698a",
+    "results/metrics.json": "a2e188d72ac00f68e0556027b929f48e03222f5b371a313796cf14315662a6b9"
+  }
+}

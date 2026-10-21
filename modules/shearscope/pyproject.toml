@@ -1,0 +1,32 @@
+[build-system]
+requires = ["scikit-build-core>=0.11,<2", "pybind11>=3,<4"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "shearscope"
+version = "0.1.0"
+description = "A reproducible C++/Python laboratory for shear locking and beam vibration"
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.12,<2", "matplotlib>=3.8,<4"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<10", "pytest-cov>=6,<8", "ruff>=0.11,<1", "build>=1,<2", "clang-format==23.1.1"]
+
+[project.scripts]
+shearscope = "shearscope.cli:main"
+
+[tool.scikit-build]
+wheel.packages = ["src/shearscope"]
+cmake.build-type = "Release"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+line-length = 96
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

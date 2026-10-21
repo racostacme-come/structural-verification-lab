@@ -1,0 +1,28 @@
+{
+  "pages": 4,
+  "page_limit": 5,
+  "engine": "tectonic",
+  "overfull_boxes": 0,
+  "undefined_references": 0,
+  "inputs_sha256": {
+    "paper/paper.tex": "41f1a83b55febc419f99f785f6f625d0e765b55f1fb4550cca1a0ec9c82b01f8",
+    "paper/numbers.tex": "fb1709f6428cab01fe0928bedaf9c0469a2249edff8e26a29634d99c1def8fbc",
+    "paper/build.py": "1ee4640b85b566c232981f2197bea274b8b818d2b89df086c132d1cab6b8629f",
+    "pyproject.toml": "9b433ad22941658a0c13c219981e9463c6507330872249f20d9ababa527eae47",
+    "CMakeLists.txt": "c698c25a49e05c3207193cf44e7355e1bb4b4ba7175ea96afc81bf44dc370319",
+    "src/bucklemap/__init__.py": "a47b04ed60c65c4fb6ee949458576961c30d0bb1e27ba5ba15896abf43f23a2b",
+    "src/bucklemap/cli.py": "74215e33fc5ffc5c30e4bec81a9f0a117359ffe19bcfd200334da23302660f3a",
+    "src/bucklemap/experiments.py": "4b0006618a4490befb5070abb191f9510d8c38d61b88c1bae58c537c8b076281",
+    "src/bucklemap/model.py": "657a600ed24996996e75dc0d891fde3803171e79c4b2274a81ead25d39a769ce",
+    "cpp/beam.hpp": "bcf2fa878b5a80e3260c78a5e63f5c84e908325453d433cece1f115e41b37196",
+    "cpp/bindings.cpp": "b50c60326daa4c819680f9e887d17cf983174a93fcdccd700fc050fc6b70a702",
+    "cpp/test_beam.cpp": "0a71db7c8ffdcddebaff0ca569addb7a894f7b559360310c6ccd107441bb5704",
+    "examples/results/boundary.csv": "ac2a5fb899e81715e0397ef33de0bc9ce382fbbddbf30be7654030e6b4a98aa6",
+    "examples/results/convergence.csv": "4148798f6b3caa9d76568fa20b6abd1b938e02973c912e8c43a6f53a28119c1a",
+    "examples/results/convergence.png": "e7c3237491db40058cc521e7b85ae01b9b970add1cb5bb896ec99331ab383e68",
+    "examples/results/metrics.json": "ea3a5f5dd534bf6841c61b802959bffd99fca514b35d57a93c044065a69c050c",
+    "examples/results/restraint.csv": "43589d89f02299c9159be193c63658c5181f6d87493398f4d88cfaf145ec53d2",
+    "examples/results/restraint.png": "08d7cf7052cdf0ff1847dd55529827ebb9b7d8f2e96438e9c426dc6743c87321"
+  },
+  "pdf_sha256": "568ff0e815073916777dd225441a00c68fb42165465bccde237c99091091fac5"
+}

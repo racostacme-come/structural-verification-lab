@@ -1,0 +1,31 @@
+{
+  "pages": 4,
+  "page_limit": 5,
+  "engine": "tectonic",
+  "overfull_boxes": 0,
+  "undefined_references": 0,
+  "inputs_sha256": {
+    "paper/paper.tex": "d6f4da30e7c30c7e5f31f788b553981f16edc8d90cfc5b00b7c1dfef3637dae0",
+    "paper/numbers.tex": "f3deb4bfe33e1a01de3d464123d74f3e641cd5ac53fd4975dc3779e14cf3b8cd",
+    "paper/build.py": "8a2ba04dd07ae570d28e322be5952481965c6e4ca352dc7c80a23c71e0a3b3a1",
+    "pyproject.toml": "f6a5f62b53c47de33006eefdd162d4123144abb670898c2a36403d0f990c93a9",
+    "src/boundarybalance/__init__.py": "a1c22fe4f156bdef9cb34282144a64f94eceece350cd11c79db9fa0b7ac956f7",
+    "src/boundarybalance/cli.py": "b9fadef373719d4a795659d2e0215cdd76302eb03779734fc75957cc1959dff1",
+    "src/boundarybalance/experiments.py": "6fe7bc56e636a44e1b00fe5f6c93d41996abecf2f91601f753c0f66264d4e8fa",
+    "src/boundarybalance/fem.py": "25e452df4503d486235851f23976de27237c6cac77fb2839210ad8aae7864845",
+    "src/boundarybalance/problems.py": "f49069921a735b369aad03f3503d45fafb41c83d7b10bf675317ffae12b00359",
+    "tests/test_cli.py": "40c3aaebbf0f048a038e794eef9f45af104b773e4d3271cb645d6353b3348c1b",
+    "tests/test_fem.py": "3220ad403b7aafbd1e8de9efa6ae545dfe830327ae051c1b527a8629db78d4c3",
+    "scripts/check_manifest.py": "9ee2fe5c5e22f2d476572a2067327646ea02ad3adf46cb0d6473e3595ffd311d",
+    "scripts/check_samples.py": "ebc970d5905aa58ba4568aec907a93d171a051ef00f06a104ce18b5ca3490395",
+    "examples/results/convergence.csv": "1b8e410bf013fc44ce359ee68d2aa968d377c1d47c27f867fcf3051a8bb7be85",
+    "examples/results/convergence.pdf": "d149d1f22a81f5a69a75243f5ae5238e2e5c7696cfd05406f06807b27216adb1",
+    "examples/results/convergence.png": "d54aad4c45d49311a218b2e5b838e8fef9cac7ed1f0fe9a19a0e9b1d47a87480",
+    "examples/results/metrics.json": "d20dada573d5bea3a1e3345848d3135b34aa82bacb7eb99e7596c2939cb1a4cc",
+    "examples/results/parameter.pdf": "792327b272e02f54e0e0f507a37e24cf32e110ae4d46adcf0eecfb9b0008a494",
+    "examples/results/parameter.png": "0c488a6f15f7a3a57c1b5c7a0ec5e3877110e90b4ab42faf9084e92218f683cf",
+    "examples/results/sweep.csv": "aa9c14c1b921acc9f3e692af7f39f553905a718a7da9217b3fca3946f702e8d4",
+    "examples/results/thresholds.csv": "6032d07725ed334c54c7f1e9f7add981ec8a5089850b926f553a6b2dbc42f239"
+  },
+  "pdf_sha256": "93585782106bd22e8e027bbb60370c750b768c8dc6a974e0cea8c0adbed17ce8"
+}

@@ -1,0 +1,37 @@
+{
+  "material": {
+    "E_MPa": 200000,
+    "yield_MPa": 250,
+    "Hi_MPa": 2000,
+    "Hk_MPa": 3000
+  },
+  "cycle": {
+    "increments": 1600,
+    "stored_MPa": 1.6390635832345337,
+    "dissipation_MPa": 9.287178901541946,
+    "endpoint_work_MPa": 10.960206574186548,
+    "work_defect_MPa": 0.03396408941011782,
+    "max_balance_error_MPa": 8.704148513061227e-14
+  },
+  "monotonic_max_stress_error_MPa": 5.684341886080802e-14,
+  "tangent_max_error_normalized_by_E": 9.092728760151658e-11,
+  "defect_refinement_orders": [
+    0.9727656345394288,
+    0.9953706420719429,
+    0.9927238572305681,
+    0.9990402258981859,
+    0.9983626361623381
+  ],
+  "bar": {
+    "exact_stress_MPa": 232.14285714285717,
+    "max_stress_error_MPa": 1.3642420526593924e-12,
+    "max_nodal_error_mm": 3.3306690738754696e-16,
+    "consistent_corrections": 1,
+    "elastic_corrections": 72,
+    "consistent_residuals_N": [
+      1825.2427184466023,
+      1.8189894035458565e-12
+    ],
+    "elastic_final_residual_N": 2.1950882000965066e-07
+  }
+}

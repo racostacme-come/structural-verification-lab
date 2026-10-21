@@ -1,0 +1,32 @@
+{
+  "parameters": {
+    "center": 0.37,
+    "width": 0.04,
+    "theta": 0.5,
+    "tolerance": 0.15,
+    "assembly_quadrature": 8,
+    "error_quadrature": 16,
+    "initial_elements": 8
+  },
+  "stop_reason": "tolerance",
+  "adaptive_solves": 22,
+  "final_elements": 426,
+  "final_free_dofs": 425,
+  "adaptive_energy_error": 0.02550963935079268,
+  "uniform_equal_cells_energy_error": 0.1642009870872626,
+  "adaptive_to_uniform_energy_ratio": 0.15535618758026037,
+  "final_estimator": 0.1250757916178193,
+  "final_effectivity": 4.90307957309215,
+  "sine_finest_l2_order": 1.9999857768594909,
+  "sine_finest_energy_order": 0.9999891366450849,
+  "quadrature_8_to_16_max_nodal_change": 7.025354009783613e-09,
+  "error_quadrature_16_to_24_energy_change": 2.636779683484747e-16,
+  "checks": {
+    "tolerance_reached": true,
+    "l2_order": true,
+    "energy_order": true,
+    "adaptive_advantage": true,
+    "load_quadrature_stability": true,
+    "error_quadrature_stability": true
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "static_cases": 80,
+  "modal_cases": 10,
+  "L_over_h_100_n8_full_tip_ratio": 0.019577084771291078,
+  "L_over_h_100_n8_reduced_tip_ratio": 0.996094054674337,
+  "max_static_relative_residual": 8.087049487161042e-08,
+  "note": "Modal reference is the slender Euler-Bernoulli limit, not exact Timoshenko."
+}

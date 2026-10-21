@@ -1,0 +1,5 @@
+include LICENSE README.md pyproject.toml requirements-tested.txt
+recursive-include tests *.py
+recursive-include scripts *.py
+recursive-include examples/results *.json *.csv *.pdf *.png
+include paper/paper.tex paper/numbers.tex paper/paper.pdf paper/build.py paper/validation.json paper/README.md

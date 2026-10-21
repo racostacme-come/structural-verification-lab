@@ -1,0 +1,10 @@
+.venv/
+build/
+dist/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+.pytest-tmp/
+.ruff_cache/
+output/
+paper/build/
