@@ -5,6 +5,7 @@
 - Windows, Python 3.12.2; 250 component Python tests and nine root integration/integrity tests passed. Complete output is in `validation/tests.json`.
 - Four C++17 invariant executables built with MSVC 19.44 and passed CTest. The `native` command records configure/build/test commands and complete output in `validation/native.json`.
 - 197 imported files were compared with original pinned Git blobs: 196 exact matches and one explicitly documented attributes patch. See `validation/source-audit.json` and `docs/provenance.md`.
+- Fresh clones with `core.autocrlf=false` and `core.autocrlf=true` both passed all 197 snapshot hashes; `validation/checkout-audit.json` records the tested code commit. All 19 original component repositories remained clean.
 - The connected cantilever experiment was reproduced. At 32 elements, relative buckling error is 7.919e-9, reduced compliance error 2.441e-4 and full-quadrature compliance error 0.7579. The scalar product is 0.822266 versus pi^2/12 = 0.822467.
 - Independent tests check elastic-modulus scaling at factors 0.1, 3 and 10; geometric scaling at factors 0.25 and 4; and continuum refinement at slenderness ratios 20 and 100. These are separate from the byte-integrity checks and from experimental physical validity, which is not claimed.
 - Tectonic compiled the revised synthesis to two pages. Both rendered pages were visually inspected: equations, table, references and page boundaries are legible and unclipped. No undefined references or overfull boxes. A nonfatal underfull line in the bibliography does not clip content.
