@@ -119,8 +119,12 @@ def test_versioned_experiment_reproduces():
     assert actual['source_sha256'] == expected['source_sha256']
     for a,b in zip(actual['cases'],expected['cases'],strict=True):
         assert a['name'] == b['name']
-        for key in ('reference_force_N','element_force_N','displacement_m','support_force_N'):
-            np.testing.assert_allclose(a[key],b[key],rtol=1e-11,atol=1e-12)
+        for key in ('reference_force_N','element_force_N','support_force_N'):
+            # Free-end forces cancel to zero; use the physical load scale,
+            # not a near-zero reference value or a platform-specific ulp.
+            np.testing.assert_allclose(a[key],b[key],rtol=1e-11,atol=1e-11*b['force_scale_N'])
+        np.testing.assert_allclose(a['displacement_m'],b['displacement_m'],
+                                   rtol=1e-11,atol=1e-11*b['displacement_scale_m'])
     for a,b in zip(actual['affine_temperature_refinement'],expected['affine_temperature_refinement'],strict=True):
         assert a['elements'] == b['elements']
         assert a['midpoint_displacement_error_m'] == pytest.approx(b['midpoint_displacement_error_m'],rel=1e-9)
