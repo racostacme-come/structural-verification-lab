@@ -1,5 +1,13 @@
 # Seven-day major-project cycle
 
+Active cycle: **thermoelastic transfer**, started 27 October 2026, day 1.
+Target finish 2 November, allowed window 31 October-4 November. See the
+[research contract](docs/thermoelastic-transfer.md) for thresholds and daily
+steps. Day 1 implements the independent analytical bar oracle, original
+Python assembly and reproducible prescribed-temperature baseline. Next:
+conservative transient heat/contact with independent energy and flux checks.
+The new synthesis is planned for day 6; the existing paper describes v0.1.0.
+
 This release consolidates existing work; its historical development is not portrayed as seven new days of work.
 
 Future substantive extensions use a seven-day target, with a permitted 5–9-day window:

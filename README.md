@@ -6,6 +6,15 @@ This major project integrates 6 previously independent research implementations 
 
 ## Start here
 
+An original [thermoelastic-transfer study](docs/thermoelastic-transfer.md) is
+in progress (27 October-2 November target). Day 1 provides an independent
+restrained-bar continuum oracle, Python FE baseline, analytical patches and
+four-level displacement interpolation study. Run `python -m thermomechanics`
+after setup; [versioned baseline](results/thermoelastic-baseline.json).
+Heat/contact, nonmatching transfer and the new C++ kernel are planned next.
+The paper below remains the released v0.1.0 beam synthesis until the new
+study has measured results and completes manuscript validation.
+
 Python 3.11+ (CI uses 3.12), Git, internet for initial dependency installation, and a C++17 compiler are required. On Windows use Visual Studio 2022 with Desktop development with C++ and a Windows SDK. On Linux use GCC or Clang. Use a fresh virtual environment.
 
 ```sh

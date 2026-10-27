@@ -1,0 +1,211 @@
+{
+  "schema_version": 1,
+  "scope": "Prescribed temperature; no heat solver or mesh transfer yet; synthetic verification only.",
+  "source_sha256": {
+    "__init__.py": "06e0abc3f1fc129455310afbf554150d7837ff7fb1a60ffb74438437a6752b2d",
+    "__main__.py": "ea69855aa7a5df9dd60f8b37f3b42cf6287e90e6cdb50ca7f4e51c55bf8741df",
+    "mechanics.py": "024871aefb9b353a16fb92cb7d76024509103f3be9a8ed17361ffe36d8ac9436",
+    "model.py": "0eb21933f5d408282e3b2a9a6276ec7c6ec2c9f4c24fa6c81ef875aee00f89e6",
+    "reference.py": "78fb44864205151c1b9b6cc0f878a0960ca6ed6703633c23f8765210dc97bb15"
+  },
+  "cases": [
+    {
+      "name": "uniform_restrained",
+      "nodes_m": [
+        0.0,
+        0.4,
+        1.0
+      ],
+      "young_Pa": [
+        70000000000.0,
+        70000000000.0
+      ],
+      "expansion_per_K": [
+        2.3e-05,
+        2.3e-05
+      ],
+      "areas_m2": [
+        0.0002,
+        0.0002
+      ],
+      "mean_temperature_increment_K": [
+        40.0,
+        40.0
+      ],
+      "right_displacement_m": 0.0,
+      "reference_force_N": -12879.999999999998,
+      "element_force_N": [
+        -12880.0,
+        -12880.0
+      ],
+      "displacement_m": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "support_force_N": [
+        12880.0,
+        -12880.0
+      ],
+      "force_scale_N": 12880.0,
+      "displacement_scale_m": 0.00092,
+      "scaled_force_error": 1.4122588536846712e-16,
+      "scaled_nodal_displacement_error": 1.1784806222668527e-16
+    },
+    {
+      "name": "uniform_free",
+      "nodes_m": [
+        0.0,
+        0.4,
+        1.0
+      ],
+      "young_Pa": [
+        70000000000.0,
+        70000000000.0
+      ],
+      "expansion_per_K": [
+        2.3e-05,
+        2.3e-05
+      ],
+      "areas_m2": [
+        0.0002,
+        0.0002
+      ],
+      "mean_temperature_increment_K": [
+        40.0,
+        40.0
+      ],
+      "right_displacement_m": null,
+      "reference_force_N": 0.0,
+      "element_force_N": [
+        -1.5178830414797062e-12,
+        0.0
+      ],
+      "displacement_m": [
+        0.0,
+        0.000368,
+        0.00092
+      ],
+      "support_force_N": [
+        0.0,
+        1.8189894035458565e-12
+      ],
+      "force_scale_N": 12880.0,
+      "displacement_scale_m": 0.00092,
+      "scaled_force_error": 1.1784806222668527e-16,
+      "scaled_nodal_displacement_error": 0.0
+    },
+    {
+      "name": "two_material_restrained",
+      "nodes_m": [
+        0.0,
+        0.4,
+        1.0
+      ],
+      "young_Pa": [
+        70000000000.0,
+        190000000000.0
+      ],
+      "expansion_per_K": [
+        2.3e-05,
+        1.1e-05
+      ],
+      "areas_m2": [
+        0.0002,
+        0.00015
+      ],
+      "mean_temperature_increment_K": [
+        60.0,
+        25.0
+      ],
+      "right_displacement_m": 0.0,
+      "reference_force_N": -14448.636363636362,
+      "element_force_N": [
+        -14448.63636363636,
+        -14448.636363636364
+      ],
+      "displacement_m": [
+        0.0,
+        0.00013918181818181822,
+        0.0
+      ],
+      "support_force_N": [
+        14448.636363636362,
+        -14448.636363636362
+      ],
+      "force_scale_N": 19320.0,
+      "displacement_scale_m": 0.000717,
+      "scaled_force_error": 9.415059024564474e-17,
+      "scaled_nodal_displacement_error": 7.560684605896126e-17
+    },
+    {
+      "name": "two_material_imposed",
+      "nodes_m": [
+        0.0,
+        0.4,
+        1.0
+      ],
+      "young_Pa": [
+        70000000000.0,
+        190000000000.0
+      ],
+      "expansion_per_K": [
+        2.3e-05,
+        1.1e-05
+      ],
+      "areas_m2": [
+        0.0002,
+        0.00015
+      ],
+      "mean_temperature_increment_K": [
+        60.0,
+        25.0
+      ],
+      "right_displacement_m": 0.0001,
+      "reference_force_N": -12433.484848484846,
+      "element_force_N": [
+        -12433.484848484848,
+        -12433.484848484846
+      ],
+      "displacement_m": [
+        0.0,
+        0.00019675757575757574,
+        0.0001
+      ],
+      "support_force_N": [
+        12433.484848484848,
+        -12433.484848484844
+      ],
+      "force_scale_N": 19320.0,
+      "displacement_scale_m": 0.000717,
+      "scaled_force_error": 9.415059024564474e-17,
+      "scaled_nodal_displacement_error": 5.670513454422095e-17
+    }
+  ],
+  "affine_temperature_refinement": [
+    {
+      "elements": 4,
+      "midpoint_displacement_error_m": 1.4375000000000133e-05,
+      "max_nodal_error_m": 2.439454888092385e-19,
+      "observed_order": null
+    },
+    {
+      "elements": 8,
+      "midpoint_displacement_error_m": 3.5937500000001314e-06,
+      "max_nodal_error_m": 2.439454888092385e-19,
+      "observed_order": 1.9999999999999607
+    },
+    {
+      "elements": 16,
+      "midpoint_displacement_error_m": 8.984375000003022e-07,
+      "max_nodal_error_m": 3.5236570605778894e-19,
+      "observed_order": 1.9999999999995675
+    },
+    {
+      "elements": 32,
+      "midpoint_displacement_error_m": 2.2460937500092936e-07,
+      "max_nodal_error_m": 8.944667923005412e-19,
+      "observed_order": 1.999999999994516
+    }
+  ]
+}

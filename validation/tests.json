@@ -2,42 +2,42 @@
   {
     "module": "shearscope",
     "returncode": 0,
-    "seconds": 3.3429999999934807,
-    "output": ".........................                                                [100%]\n25 passed in 2.56s\n"
+    "seconds": 6.954000000027008,
+    "output": ".........................                                                [100%]\n25 passed in 6.36s\n"
   },
   {
     "module": "bucklemap",
     "returncode": 0,
-    "seconds": 3.0940000000118744,
-    "output": ".....................................................                    [100%]\n53 passed in 2.55s\n"
+    "seconds": 6.51500000001397,
+    "output": ".....................................................                    [100%]\n53 passed in 6.04s\n"
   },
   {
     "module": "foldtrace",
     "returncode": 0,
-    "seconds": 2.5939999999827705,
-    "output": "......................................................                   [100%]\n54 passed in 2.04s\n"
+    "seconds": 2.547000000020489,
+    "output": "......................................................                   [100%]\n54 passed in 2.02s\n"
   },
   {
     "module": "yieldledger",
     "returncode": 0,
-    "seconds": 0.75,
-    "output": ".......................................                                  [100%]\n39 passed in 0.29s\n"
+    "seconds": 0.7339999999385327,
+    "output": ".......................................                                  [100%]\n39 passed in 0.31s\n"
   },
   {
     "module": "meshbeacon",
     "returncode": 0,
-    "seconds": 3.1089999999967404,
-    "output": "..............................................                           [100%]\n46 passed in 2.49s\n"
+    "seconds": 3.0630000000819564,
+    "output": "..............................................                           [100%]\n46 passed in 2.51s\n"
   },
   {
     "module": "boundarybalance",
     "returncode": 0,
-    "seconds": 1.9690000000118744,
-    "output": ".................................                                        [100%]\n33 passed in 1.47s\n"
+    "seconds": 1.875,
+    "output": ".................................                                        [100%]\n33 passed in 1.43s\n"
   },
   {
     "module": "integration",
     "returncode": 0,
-    "output": ".........                                                                [100%]\n9 passed in 0.83s\n"
+    "output": "..................................                                       [100%]\n34 passed in 1.20s\n"
   }
 ]
