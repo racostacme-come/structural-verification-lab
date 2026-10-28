@@ -4,6 +4,8 @@
   "source_sha256": {
     "__init__.py": "06e0abc3f1fc129455310afbf554150d7837ff7fb1a60ffb74438437a6752b2d",
     "__main__.py": "ea69855aa7a5df9dd60f8b37f3b42cf6287e90e6cdb50ca7f4e51c55bf8741df",
+    "heat.py": "153d15b144bfbbd370c26c9f476aa3a805a3c9d16fe148da55003170bae869ea",
+    "heat_experiment.py": "cf63dd2d9edfcd9e40ddc51fca6d129239ddda0a4ad247b2cf97550f0765961b",
     "mechanics.py": "024871aefb9b353a16fb92cb7d76024509103f3be9a8ed17361ffe36d8ac9436",
     "model.py": "0eb21933f5d408282e3b2a9a6276ec7c6ec2c9f4c24fa6c81ef875aee00f89e6",
     "reference.py": "78fb44864205151c1b9b6cc0f878a0960ca6ed6703633c23f8765210dc97bb15"

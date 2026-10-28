@@ -65,3 +65,10 @@ The command rejects unresolved references, overfull boxes and more than five pag
 Imported snapshots are pinned to original Git commits in `suite.json`, with SHA-256 for every imported file. `verify` detects unrecorded changes. Original repositories and histories remain available; this repository starts a new integration history. Intentional module changes require a documented patch record and manifest refresh. [Provenance repair](docs/provenance.md) explains canonical source bytes and the explicit MeshBeacon attributes patch. MIT notices are retained for every component; the integration layer is also MIT licensed.
 
 CI runs all component Python tests, integration checks, and the four native C++17 invariant tests on Linux and Windows. C++ Python extensions are built during install. The separate `native` command writes commands, return codes and compiler/CTest output to `validation/native.json`. Independent integration tests check modulus scaling, geometrically similar beams and refinement toward analytical continuum limits. Sanitizers and full historical reproduction campaigns are outside this gate. Recorded results are synthetic numerical verification, not experimental physical validation.
+# Thermal contact extension
+
+The original [conservative heat/contact solver](docs/thermal-contact.md) adds
+backward Euler conduction, independent energy/flux checks and separate temporal
+and spatial refinement studies. Reproduce with
+`python -m thermomechanics.heat_experiment`. This is an in-progress extension;
+the existing synthesis paper describes the released beam study.

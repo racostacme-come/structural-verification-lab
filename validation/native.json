@@ -12,7 +12,7 @@
       "-DCMAKE_BUILD_TYPE=Release"
     ],
     "returncode": 0,
-    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.4s)\n-- Generating done (0.3s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n"
+    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.4s)\n-- Generating done (0.5s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n"
   },
   {
     "module": "shearscope",
@@ -24,7 +24,7 @@
       "Release"
     ],
     "returncode": 0,
-    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/shearscope/CMakeLists.txt\n  test_element.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\shearscope\\Release\\test_element.exe\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/shearscope/CMakeLists.txt\n"
+    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  test_element.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\shearscope\\Release\\test_element.exe\n"
   },
   {
     "module": "shearscope",
@@ -38,7 +38,7 @@
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.05 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.10 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.05 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.09 sec\n"
   },
   {
     "module": "bucklemap",
@@ -53,7 +53,7 @@
       "-DCMAKE_BUILD_TYPE=Release"
     ],
     "returncode": 0,
-    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.1s)\n-- Generating done (0.3s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n"
+    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.1s)\n-- Generating done (0.4s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n"
   },
   {
     "module": "bucklemap",
@@ -65,7 +65,7 @@
       "Release"
     ],
     "returncode": 0,
-    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/bucklemap/CMakeLists.txt\n  test_beam.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\bucklemap\\Release\\test_beam.exe\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/bucklemap/CMakeLists.txt\n"
+    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  test_beam.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\bucklemap\\Release\\test_beam.exe\n"
   },
   {
     "module": "bucklemap",
@@ -79,7 +79,7 @@
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.05 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.10 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.03 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.07 sec\n"
   },
   {
     "module": "foldtrace",
@@ -94,7 +94,7 @@
       "-DCMAKE_BUILD_TYPE=Release"
     ],
     "returncode": 0,
-    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.1s)\n-- Generating done (0.3s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n"
+    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.1s)\n-- Generating done (0.4s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n"
   },
   {
     "module": "foldtrace",
@@ -106,7 +106,7 @@
       "Release"
     ],
     "returncode": 0,
-    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/foldtrace/CMakeLists.txt\n  test_continuation.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\foldtrace\\Release\\test_continuation.exe\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/foldtrace/CMakeLists.txt\n"
+    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  test_continuation.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\foldtrace\\Release\\test_continuation.exe\n"
   },
   {
     "module": "foldtrace",
@@ -120,7 +120,7 @@
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n    Start 1: continuation_invariants\n1/1 Test #1: continuation_invariants ..........   Passed    0.05 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.10 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n    Start 1: continuation_invariants\n1/1 Test #1: continuation_invariants ..........   Passed    0.05 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.08 sec\n"
   },
   {
     "module": "yieldledger",
@@ -135,7 +135,7 @@
       "-DCMAKE_BUILD_TYPE=Release"
     ],
     "returncode": 0,
-    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.1s)\n-- Generating done (0.3s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/yieldledger\n"
+    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.1s)\n-- Generating done (0.5s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/yieldledger\n"
   },
   {
     "module": "yieldledger",
@@ -147,7 +147,7 @@
       "Release"
     ],
     "returncode": 0,
-    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/yieldledger/CMakeLists.txt\n  test_material.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\yieldledger\\Release\\test_material.exe\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/modules/yieldledger/CMakeLists.txt\n"
+    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  test_material.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\yieldledger\\Release\\test_material.exe\n"
   },
   {
     "module": "yieldledger",
