@@ -1,4 +1,10 @@
-# Thermoelastic transfer: research contract and day-1 baseline
+# Thermoelastic transfer: research contract
+
+Status 29 October, calendar day 3: baseline, conservative heat/contact and
+[native C++17 assembly](native-thermoelastic.md) are implemented. The early
+29 October run completed the missed heat milestone; the later run completed
+native assembly on the same calendar day. Nonmatching transfer is next.
+The day-1 descriptions below retain their original scope.
 
 Cycle started 27 October 2026 (Europe/Paris). Target release: 2 November;
 earliest 31 October; 3-4 November only for justified repairs. This is an

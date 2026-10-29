@@ -11,7 +11,8 @@ in progress (27 October-2 November target). Day 1 provides an independent
 restrained-bar continuum oracle, Python FE baseline, analytical patches and
 four-level displacement interpolation study. Run `python -m thermomechanics`
 after setup; [versioned baseline](results/thermoelastic-baseline.json).
-Heat/contact, nonmatching transfer and the new C++ kernel are planned next.
+Conservative heat/contact and the [C++17 assembly backend](docs/native-thermoelastic.md)
+are implemented. Nonmatching transfer and coupled experiments are next.
 The paper below remains the released v0.1.0 beam synthesis until the new
 study has measured results and completes manuscript validation.
 
@@ -23,9 +24,10 @@ python -m venv .venv
 # Linux/macOS: source .venv/bin/activate
 python suite.py verify
 python suite.py install
-python suite.py test
 python suite.py native
+python suite.py test
 python suite.py experiment
+python -m thermomechanics.native_experiment
 ```
 
 The runner stops on install failure and reports every module's test outcome. Tests execute in separate processes to avoid duplicate test-file/import names. `validation/tests.json` contains the actual outputs; `results/integration.json` records the connected experiment. Rerunning overwrites only these generated reports. For Windows builds, if compiler discovery fails, use a Visual Studio developer shell or set `CMAKE_GENERATOR=Visual Studio 17 2022`.
@@ -64,7 +66,7 @@ The command rejects unresolved references, overfull boxes and more than five pag
 
 Imported snapshots are pinned to original Git commits in `suite.json`, with SHA-256 for every imported file. `verify` detects unrecorded changes. Original repositories and histories remain available; this repository starts a new integration history. Intentional module changes require a documented patch record and manifest refresh. [Provenance repair](docs/provenance.md) explains canonical source bytes and the explicit MeshBeacon attributes patch. MIT notices are retained for every component; the integration layer is also MIT licensed.
 
-CI runs all component Python tests, integration checks, and the four native C++17 invariant tests on Linux and Windows. C++ Python extensions are built during install. The separate `native` command writes commands, return codes and compiler/CTest output to `validation/native.json`. Independent integration tests check modulus scaling, geometrically similar beams and refinement toward analytical continuum limits. Sanitizers and full historical reproduction campaigns are outside this gate. Recorded results are synthetic numerical verification, not experimental physical validation.
+CI runs all component Python tests, integration checks, and five native C++17 invariant tests on Linux and Windows. Component Python extensions are built during install; the original thermoelastic library is built by `native` before tests. The `native` command writes commands, return codes and compiler/CTest output to `validation/native.json`. Independent integration tests check modulus scaling, geometrically similar beams and refinement toward analytical continuum limits. Sanitizers and full historical reproduction campaigns are outside this gate. Recorded results are synthetic numerical verification, not experimental physical validation.
 # Thermal contact extension
 
 The original [conservative heat/contact solver](docs/thermal-contact.md) adds

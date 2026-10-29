@@ -25,12 +25,15 @@ class MechanicalSolution:
     element_force: np.ndarray  # tension positive
 
 
-def solve(mesh: BarMesh, delta_temperature, *, left=0.0, right=0.0):
-    """Fix left and optionally right displacement (m); no applied axial loads."""
+def solve(mesh: BarMesh, delta_temperature, *, left=0.0, right=0.0, assembler=None):
+    """Fix end displacement(s); optionally use NativeAssembler.assemble.
+
+    Only assembly is replaced. Boundary elimination and solution use NumPy.
+    """
     if not np.isfinite(left) or (right is not None and not np.isfinite(right)):
         raise ValueError("prescribed displacements must be finite")
     dt = element_temperatures(mesh, delta_temperature)
-    stiffness, load = assemble(mesh, dt)
+    stiffness, load = (assemble if assembler is None else assembler)(mesh, dt)
     n = len(mesh.nodes)
     constrained = np.array([0] if right is None else [0, n-1])
     free = np.setdiff1d(np.arange(n), constrained)

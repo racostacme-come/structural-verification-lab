@@ -17,10 +17,11 @@ jobs:
           python-version: '3.12'
       - run: python suite.py verify
       - run: python suite.py install
+      - run: python suite.py native
       - run: python suite.py test
       - run: python -m thermomechanics --output validation/thermoelastic-baseline.json
       - run: python -m thermomechanics.heat_experiment --output validation/thermal-contact.json
-      - run: python suite.py native
+      - run: python -m thermomechanics.native_experiment --output validation/native-thermoelastic.json
       - run: python suite.py experiment
       - uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a
         if: always()
