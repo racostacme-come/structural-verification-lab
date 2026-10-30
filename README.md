@@ -12,7 +12,8 @@ restrained-bar continuum oracle, Python FE baseline, analytical patches and
 four-level displacement interpolation study. Run `python -m thermomechanics`
 after setup; [versioned baseline](results/thermoelastic-baseline.json).
 Conservative heat/contact and the [C++17 assembly backend](docs/native-thermoelastic.md)
-are implemented. Nonmatching transfer and coupled experiments are next.
+are implemented. [Conservative nonmatching transfer and the coupled CLI](docs/coupled-transfer.md)
+now connect heat, transfer and C++ assembly; independent coupled refinements are next.
 The paper below remains the released v0.1.0 beam synthesis until the new
 study has measured results and completes manuscript validation.
 
@@ -28,6 +29,7 @@ python suite.py native
 python suite.py test
 python suite.py experiment
 python -m thermomechanics.native_experiment
+python -m thermomechanics.coupled_experiment
 ```
 
 The runner stops on install failure and reports every module's test outcome. Tests execute in separate processes to avoid duplicate test-file/import names. `validation/tests.json` contains the actual outputs; `results/integration.json` records the connected experiment. Rerunning overwrites only these generated reports. For Windows builds, if compiler discovery fails, use a Visual Studio developer shell or set `CMAKE_GENERATOR=Visual Studio 17 2022`.
