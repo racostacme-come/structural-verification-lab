@@ -12,7 +12,7 @@
       "-DCMAKE_BUILD_TYPE=Release"
     ],
     "returncode": 0,
-    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.4s)\n-- Generating done (0.5s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n"
+    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.5s)\n-- Generating done (0.6s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n"
   },
   {
     "module": "shearscope",
@@ -38,7 +38,7 @@
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.05 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.09 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.06 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.10 sec\n"
   },
   {
     "module": "bucklemap",
@@ -79,7 +79,7 @@
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.06 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.11 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.12 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.17 sec\n"
   },
   {
     "module": "foldtrace",
@@ -120,7 +120,7 @@
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n    Start 1: continuation_invariants\n1/1 Test #1: continuation_invariants ..........   Passed    0.06 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.11 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n    Start 1: continuation_invariants\n1/1 Test #1: continuation_invariants ..........   Passed    0.06 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.10 sec\n"
   },
   {
     "module": "yieldledger",
@@ -161,7 +161,7 @@
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/yieldledger\n    Start 1: material_invariants\n1/1 Test #1: material_invariants ..............   Passed    0.07 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.11 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/yieldledger\n    Start 1: material_invariants\n1/1 Test #1: material_invariants ..............   Passed    0.07 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.13 sec\n"
   },
   {
     "module": "thermomechanics",
@@ -175,7 +175,7 @@
       "-DCMAKE_BUILD_TYPE=Release"
     ],
     "returncode": 0,
-    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.1s)\n-- Generating done (0.5s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/thermomechanics\n"
+    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.1s)\n-- Generating done (0.8s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/thermomechanics\n"
   },
   {
     "module": "thermomechanics",
@@ -187,7 +187,7 @@
       "Release"
     ],
     "returncode": 0,
-    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  1>Checking Build System\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/native/CMakeLists.txt\n  thermomechanics_native.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\thermomechanics\\Release\\thermomechanics_native.dll\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/native/CMakeLists.txt\n  thermomechanics_invariants.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\thermomechanics\\Release\\thermomechanics_invariants.exe\n  Building Custom Rule D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/major-projects/structural-verification-lab/native/CMakeLists.txt\n"
+    "output": "Versi\u00c3\u00b3n de MSBuild 17.14.23+b0019275e para .NET Framework\n\n  thermomechanics_native.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\thermomechanics\\Release\\thermomechanics_native.dll\n  thermomechanics_invariants.vcxproj -> D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\thermomechanics\\Release\\thermomechanics_invariants.exe\n"
   },
   {
     "module": "thermomechanics",
@@ -201,6 +201,6 @@
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/thermomechanics\n    Start 1: thermoelastic_native_invariants\n1/1 Test #1: thermoelastic_native_invariants ...   Passed    0.07 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.12 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/thermomechanics\n    Start 1: thermoelastic_native_invariants\n1/1 Test #1: thermoelastic_native_invariants ...   Passed    0.08 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.13 sec\n"
   }
 ]

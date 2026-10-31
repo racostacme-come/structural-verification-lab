@@ -1,13 +1,14 @@
 # Seven-day major-project cycle
 
-Active cycle: **thermoelastic transfer**, started 27 October 2026; current day 4,
-30 October. Conservative nonmatching transfer and a coupled CLI are implemented.
+Active cycle: **thermoelastic transfer**, started 27 October 2026; current day 5,
+31 October. Coupled temporal/spatial refinements and a 45-case contact/property
+sweep are implemented with independent analytical references and CI reproduction.
 No contribution is backdated to the missed 28 October milestone.
 Target finish 2 November, allowed window 31 October-4 November. See the
 [research contract](docs/thermoelastic-transfer.md) for thresholds and daily
 steps. The independent analytical bar oracle, Python assembly, conservative
 heat/contact, original C++17 assembly with Python interface, and overlap transfer
-are implemented. Next: separate coupled refinements on 31 October, manuscript on 1 November, and release on
+are implemented. Next: inspect hosted refinement evidence, manuscript on 1 November, and release on
 2 November only after all acceptance gates pass.
 The new synthesis is planned for day 6; the existing paper describes v0.1.0.
 
