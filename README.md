@@ -16,8 +16,10 @@ are implemented. [Conservative nonmatching transfer and the coupled CLI](docs/co
 now connect heat, transfer and C++ assembly. [Independent coupled refinements](docs/coupled-refinement.md)
 measure first-order time and second-order smooth-field spatial convergence,
 with a 45-case contact/material sweep and explicit local-displacement limitations.
-The paper below remains the released v0.1.0 beam synthesis until the new
-study has measured results and completes manuscript validation.
+The four-page [thermoelastic synthesis](paper/paper.pdf) now connects these
+measured studies, with [source](paper/paper.tex) and generated evidence tables.
+The [released beam synthesis](https://github.com/racostacme-come/structural-verification-lab/blob/v0.1.0/paper/paper.pdf)
+remains available at v0.1.0. Release acceptance review is scheduled for 2 November.
 
 Python 3.11+ (CI uses 3.12), Git, internet for initial dependency installation, and a C++17 compiler are required. On Windows use Visual Studio 2022 with Desktop development with C++ and a Windows SDK. On Linux use GCC or Clang. Use a fresh virtual environment.
 
@@ -63,9 +65,15 @@ The component papers are retained as detailed supporting studies. New numerical 
 
 Compile with Tectonic or pdfLaTeX:
 ```sh
+python manuscript.py --write-tables
 python suite.py paper --engine tectonic
+python manuscript.py
 ```
-The command rejects unresolved references, overfull boxes and more than five pages. CI independently builds the paper. [Architecture](docs/architecture.md), [source provenance](suite.json), and [development roadmap](ROADMAP.md) describe scope and future work.
+The build rejects stale source manifests/tables, unresolved references, overfull boxes and more than five pages.
+`manuscript.py` verifies all 28 input/output hashes and the page count; it also accepts
+`--report PATH --pdf PATH` for an independent CI artifact. Hash checks establish
+provenance, not numerical accuracy. CI independently builds with pdfLaTeX.
+[Manuscript validation](validation/manuscript-day6.md) records local checks and visual review. [Architecture](docs/architecture.md), [source provenance](suite.json), and [development roadmap](ROADMAP.md) describe scope and future work.
 
 ## Provenance and development
 
@@ -77,5 +85,5 @@ CI runs all component Python tests, integration checks, and five native C++17 in
 The original [conservative heat/contact solver](docs/thermal-contact.md) adds
 backward Euler conduction, independent energy/flux checks and separate temporal
 and spatial refinement studies. Reproduce with
-`python -m thermomechanics.heat_experiment`. This is an in-progress extension;
-the existing synthesis paper describes the released beam study.
+`python -m thermomechanics.heat_experiment`. The current synthesis describes
+the thermoelastic extension; the new release remains gated on acceptance review.

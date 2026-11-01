@@ -1,5 +1,10 @@
 # Nonmatching thermoelastic coupling
 
+**1 November status:** The four-page [thermoelastic synthesis](../paper/paper.pdf)
+and [source](../paper/paper.tex) now cover the coupled results. The text below
+retains the milestone chronology; future-tense manuscript/refinement statements
+describe that earlier date. Release remains subject to acceptance review.
+
 30 October 2026, cycle day 4. Original synthetic implementation; the released
 beam paper has not yet been replaced. No component snapshot changed.
 

@@ -6,20 +6,20 @@
       "-S",
       "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\modules\\shearscope",
       "-B",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\shearscope",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\shearscope",
       "-DSHEARSCOPE_PYTHON=OFF",
       "-DBUILD_TESTING=ON",
       "-DCMAKE_BUILD_TYPE=Release"
     ],
     "returncode": 0,
-    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.5s)\n-- Generating done (0.6s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n"
+    "output": "-- Selecting Windows SDK version 10.0.26100.0 to target Windows 10.0.26200.\n-- Configuring done (0.6s)\n-- Generating done (0.6s)\n-- Build files have been written to: D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n"
   },
   {
     "module": "shearscope",
     "command": [
       "cmake",
       "--build",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\shearscope",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\shearscope",
       "--config",
       "Release"
     ],
@@ -31,14 +31,14 @@
     "command": [
       "ctest",
       "--test-dir",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\shearscope",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\shearscope",
       "-C",
       "Release",
       "--output-on-failure",
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.06 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.10 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/shearscope\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.02 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.07 sec\n"
   },
   {
     "module": "bucklemap",
@@ -47,7 +47,7 @@
       "-S",
       "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\modules\\bucklemap",
       "-B",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\bucklemap",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\bucklemap",
       "-DBUCKLEMAP_PYTHON=OFF",
       "-DBUILD_TESTING=ON",
       "-DCMAKE_BUILD_TYPE=Release"
@@ -60,7 +60,7 @@
     "command": [
       "cmake",
       "--build",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\bucklemap",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\bucklemap",
       "--config",
       "Release"
     ],
@@ -72,14 +72,14 @@
     "command": [
       "ctest",
       "--test-dir",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\bucklemap",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\bucklemap",
       "-C",
       "Release",
       "--output-on-failure",
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.12 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.17 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/bucklemap\n    Start 1: element_invariants\n1/1 Test #1: element_invariants ...............   Passed    0.02 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.07 sec\n"
   },
   {
     "module": "foldtrace",
@@ -88,7 +88,7 @@
       "-S",
       "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\modules\\foldtrace",
       "-B",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\foldtrace",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\foldtrace",
       "-DFOLDTRACE_PYTHON=OFF",
       "-DBUILD_TESTING=ON",
       "-DCMAKE_BUILD_TYPE=Release"
@@ -101,7 +101,7 @@
     "command": [
       "cmake",
       "--build",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\foldtrace",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\foldtrace",
       "--config",
       "Release"
     ],
@@ -113,14 +113,14 @@
     "command": [
       "ctest",
       "--test-dir",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\foldtrace",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\foldtrace",
       "-C",
       "Release",
       "--output-on-failure",
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n    Start 1: continuation_invariants\n1/1 Test #1: continuation_invariants ..........   Passed    0.06 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.10 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/foldtrace\n    Start 1: continuation_invariants\n1/1 Test #1: continuation_invariants ..........   Passed    0.03 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.09 sec\n"
   },
   {
     "module": "yieldledger",
@@ -129,7 +129,7 @@
       "-S",
       "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\modules\\yieldledger",
       "-B",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\yieldledger",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\yieldledger",
       "-DYIELDLEDGER_PYTHON=OFF",
       "-DBUILD_TESTING=ON",
       "-DCMAKE_BUILD_TYPE=Release"
@@ -142,7 +142,7 @@
     "command": [
       "cmake",
       "--build",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\yieldledger",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\yieldledger",
       "--config",
       "Release"
     ],
@@ -154,14 +154,14 @@
     "command": [
       "ctest",
       "--test-dir",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\yieldledger",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\yieldledger",
       "-C",
       "Release",
       "--output-on-failure",
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/yieldledger\n    Start 1: material_invariants\n1/1 Test #1: material_invariants ..............   Passed    0.07 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.13 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/yieldledger\n    Start 1: material_invariants\n1/1 Test #1: material_invariants ..............   Passed    0.03 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.08 sec\n"
   },
   {
     "module": "thermomechanics",
@@ -170,7 +170,7 @@
       "-S",
       "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\native",
       "-B",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\thermomechanics",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\thermomechanics",
       "-DBUILD_TESTING=ON",
       "-DCMAKE_BUILD_TYPE=Release"
     ],
@@ -182,7 +182,7 @@
     "command": [
       "cmake",
       "--build",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\thermomechanics",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\thermomechanics",
       "--config",
       "Release"
     ],
@@ -194,13 +194,13 @@
     "command": [
       "ctest",
       "--test-dir",
-      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\major-projects\\structural-verification-lab\\..\\..\\.native-structural\\thermomechanics",
+      "D:\\Carpetas Raphi 2026\\TUM SoSe2026\\Courses\\Computational Mechanics Projects\\.native-structural\\thermomechanics",
       "-C",
       "Release",
       "--output-on-failure",
       "--no-tests=error"
     ],
     "returncode": 0,
-    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/thermomechanics\n    Start 1: thermoelastic_native_invariants\n1/1 Test #1: thermoelastic_native_invariants ...   Passed    0.08 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.13 sec\n"
+    "output": "Test project D:/Carpetas Raphi 2026/TUM SoSe2026/Courses/Computational Mechanics Projects/.native-structural/thermomechanics\n    Start 1: thermoelastic_native_invariants\n1/1 Test #1: thermoelastic_native_invariants ...   Passed    0.07 sec\n\n100% tests passed out of 1\n\nTotal Test time (real) =   0.13 sec\n"
   }
 ]

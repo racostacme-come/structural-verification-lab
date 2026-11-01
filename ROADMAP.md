@@ -1,16 +1,18 @@
 # Seven-day major-project cycle
 
-Active cycle: **thermoelastic transfer**, started 27 October 2026; current day 5,
-31 October. Coupled temporal/spatial refinements and a 45-case contact/property
-sweep are implemented with independent analytical references and CI reproduction.
+Active cycle: **thermoelastic transfer**, started 27 October 2026; current day 6,
+1 November. Numerical implementation and independent refinement/contact evidence
+are complete. The four-page thermoelastic synthesis replaces the current paper;
+the released beam synthesis remains at v0.1.0. Tables and summary measurements
+are generated from versioned results, with strict source/PDF hash gates and
+13 manuscript acceptance/mutation tests. Local Tectonic pages are all reviewed.
 No contribution is backdated to the missed 28 October milestone.
-Target finish 2 November, allowed window 31 October-4 November. See the
-[research contract](docs/thermoelastic-transfer.md) for thresholds and daily
-steps. The independent analytical bar oracle, Python assembly, conservative
-heat/contact, original C++17 assembly with Python interface, and overlap transfer
-are implemented. Next: inspect hosted refinement evidence, manuscript on 1 November, and release on
-2 November only after all acceptance gates pass.
-The new synthesis is planned for day 6; the existing paper describes v0.1.0.
+
+Target finish 2 November, allowed window 31 October-4 November. Next: review
+hosted Linux/Windows/manuscript artifacts and complete acceptance review; merge
+and release only when every gate passes. Days 8-9 are for justified repairs.
+See the [research contract](docs/thermoelastic-transfer.md) for thresholds and
+[day-6 validation](validation/manuscript-day6.md) for exact evidence.
 
 This release consolidates existing work; its historical development is not portrayed as seven new days of work.
 

@@ -1,0 +1,13 @@
+{
+  "utc": "2026-11-01T22:07:54.802019+00:00",
+  "engine": "Tectonic 0.17.0",
+  "pages": 4,
+  "pdf_sha256": "72cef2535ad754bfe2e5356fb2cd57d0584df777146ca2f852074082ae59a6a7",
+  "review": "All four Poppler-rendered pages visually inspected: legible equations/tables, no clipping/overlap, complete command block, all references included.",
+  "render_sha256": {
+    "thermoelastic-1.png": "fbfd35ac724bebcfb7fe0bf5d276206581cd0d9937770d0977f0037e268c2ed9",
+    "thermoelastic-2.png": "e8453072177a182002c8eeb29b8b56b4149bb1527b56b064d3af72c2bc151d2b",
+    "thermoelastic-3.png": "3266329e586ac77251221e0eafe1af5fb334c8142cfbf8dfd58aedb65a46e181",
+    "thermoelastic-4.png": "46f391727652f7f62c2b32169abada8033d2bd53af5a86f8293982c03067ee74"
+  }
+}

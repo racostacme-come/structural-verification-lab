@@ -1,5 +1,10 @@
 # Coupled refinement and contact/property verification
 
+**1 November status:** The four-page [thermoelastic synthesis](../paper/paper.pdf)
+and [source](../paper/paper.tex) now cover the coupled results. The text below
+retains the milestone chronology; future-tense manuscript/refinement statements
+describe that earlier date. Release remains subject to acceptance review.
+
 This original synthetic study asks whether the heat/transfer/native-mechanics
 pipeline reproduces the expected temporal and continuum spatial orders, and
 whether thermal contact and material contrast preserve the independent

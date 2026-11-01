@@ -94,8 +94,9 @@ def native(build_root=None):
     (ROOT / "build/native-library.txt").write_text(library+"\n", encoding="utf-8", newline="\n")
 
 def paper(engine):
-    from pypdf import PdfReader
+    from manuscript import check_tables, build_report
     import shutil
+    check_tables()
     engine = engine or shutil.which("tectonic") or shutil.which("pdflatex")
     if not engine:
         raise SystemExit("Install Tectonic or pdfLaTeX, then pass --engine if needed.")
@@ -107,13 +108,9 @@ def paper(engine):
     for marker in ("Overfull", "undefined references", "undefined citations", "LaTeX Error", "Rerun to get"):
         if marker in log:
             raise SystemExit("Paper diagnostic: "+marker)
-    pages = len(PdfReader(ROOT / "paper/paper.pdf").pages)
-    if not 1 <= pages <= 5:
-        raise SystemExit(f"Expected 1-5 pages, got {pages}")
-    inputs = ["paper/paper.tex", "results/integration.json", "results/table.tex", "integration.py", "suite.json", "paper/paper.pdf"]
-    report = {"pages": pages, "sha256": {p: hashlib.sha256((ROOT/p).read_bytes()).hexdigest() for p in inputs}}
+    report = build_report()
     (ROOT/"paper/build-report.json").write_text(json.dumps(report, indent=2)+"\n", encoding="utf-8", newline="\n")
-    print(f"Compiled and checked {pages} pages.")
+    print(f"Compiled and checked {report['pages']} pages.")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
