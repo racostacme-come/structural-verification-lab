@@ -1,0 +1,109 @@
+{
+  "schema_version": 1,
+  "reviewed_utc": "2026-11-02T22:03:31.143226+00:00",
+  "candidate_version": "v0.2.0",
+  "numerical_and_manuscript_revision": "80da7beccf8b8c936a70877597df7eb287f51960",
+  "status": "local acceptance passed; publication additionally requires final candidate CI and matching merge tree",
+  "python_tests": 381,
+  "python_by_suite": {
+    "shearscope": 25,
+    "bucklemap": 53,
+    "foldtrace": 54,
+    "yieldledger": 39,
+    "meshbeacon": 46,
+    "boundarybalance": 33,
+    "integration": 131
+  },
+  "native_ctests": 5,
+  "snapshot_hashes": 598,
+  "original_repositories_clean": 19,
+  "indexed_lectures_unchanged": 34,
+  "baseline_max_scaled_force_error": 1.4122588536846712e-16,
+  "native_max_scaled_errors": {
+    "scaled_stiffness_difference": 0.0,
+    "scaled_load_difference": 0.0,
+    "scaled_force_error": 1.0342553606508168e-14,
+    "scaled_nodal_error": 1.0785201184657585e-14,
+    "scaled_free_residual": 7.043826923077307e-15,
+    "scaled_support_error": 7.043826923077307e-15
+  },
+  "coupled_max_scaled_errors": {
+    "scaled_energy_residual": 2.1073688667065683e-12,
+    "scaled_force_error": 1.7462064984902548e-15,
+    "scaled_nodal_error": 1.6064589515624878e-15,
+    "scaled_native_python_difference": 0.0,
+    "scaled_free_residual": 1.9917667873404468e-15
+  },
+  "transfer_max_scaled_integral_error": 4.053597354756373e-16,
+  "naive_relative_force_errors": [
+    2.01126647893173e-16,
+    4.02253295786346e-16,
+    0.003930587804692633,
+    0.005267442984393362
+  ],
+  "temporal_orders": [
+    {
+      "temperature_error_K": 0.971364185990031,
+      "force_error_N": 0.9713641859915803,
+      "nodal_error_m": 0.9713641859902356
+    },
+    {
+      "temperature_error_K": 0.9853810506891274,
+      "force_error_N": 0.9853810506926599,
+      "nodal_error_m": 0.9853810506896833
+    },
+    {
+      "temperature_error_K": 0.9926124066500558,
+      "force_error_N": 0.9926124066603471,
+      "nodal_error_m": 0.992612406651974
+    }
+  ],
+  "spatial_orders": [
+    {
+      "temperature_error_K": 1.9829458755690301,
+      "force_error_N": 2.0008180909834805,
+      "nodal_error_m": 2.0008180910096165
+    },
+    {
+      "temperature_error_K": 1.9957528961543167,
+      "force_error_N": 2.0002071125420695,
+      "nodal_error_m": 2.0002071124707097
+    },
+    {
+      "temperature_error_K": 1.9989392450987162,
+      "force_error_N": 2.0000519346551675,
+      "nodal_error_m": 2.0000519418671194
+    }
+  ],
+  "contact_cases": 45,
+  "contact_max_nodal_error_m": 1.4512471655332357e-06,
+  "contact_max_relative_rate_error": 2.1701378327241847e-08,
+  "contact_max_condition_number": 1852.081022769291,
+  "manuscript_pages": 4,
+  "manuscript_visual_review": "All four fresh Poppler renders inspected on 2 November; legible equations, tables, commands and references; no clipping or overlap. PDF unchanged from reviewed 1 November dual-engine build.",
+  "input_sha256": {
+    "results/thermoelastic-baseline.json": "49bc21a78fb959cb2dbba8f09f2a9a05feff4a688c9906a498e6a613e7b7f90c",
+    "results/thermal-contact.json": "1b923773ed5efd60abafdf102a4f9c135e5a5b43264f2f664578af3b3b492f82",
+    "results/native-thermoelastic.json": "86a8f10a08f38ba4dea2e2b315d544bc0fb53fcb448e4d07c01e309190618cff",
+    "results/coupled-transfer.json": "520777567431c569c3dec0434c0e9a879c4bfff77b6582e90f045b868969b1b8",
+    "results/coupled-refinement.json": "28747a0797f7810906d4e192e16c6e56a6641bb09af2729ac9c34a55b7c48b9a",
+    "validation/tests.json": "a094ee4b8e054ac93d6fb92aae97401321aa7ca939e8c1b763891c3181a544f4",
+    "validation/native.json": "faee9e963357ec458fb0ba3dd5c0b396adf2dc1a7ad10d3ff9fa2878fe9de094",
+    "paper/build-report.json": "bc3e2e5f4760a1e92efcc3ab31441c3cd4e990deb4bacdd9b288e526918690d9",
+    "paper/paper.pdf": "72cef2535ad754bfe2e5356fb2cd57d0584df777146ca2f852074082ae59a6a7",
+    "validation/release-acceptance.md": "18a1446d63f9af92fc7c25ad757f1c3496cf8112fe596703daee7494a030bf83"
+  },
+  "render_sha256": {
+    "paper/renders/release-1.png": "c527dcb4742cb97410b2795eb059fa57a1cb4bd573135d42679c144117d3837a",
+    "paper/renders/release-2.png": "58baaa7a00bee06687b9a0291a941c749bc20dfe98fb948d6024c3450d74be01",
+    "paper/renders/release-3.png": "8e889ec8387fd395576d49c4e028f8fd35f2be5de76f7cc508e7f612aaa65f41",
+    "paper/renders/release-4.png": "0a365865e838cacfd31dbeade048dc14ead53490e50f3a6e64291f6d75a073df"
+  },
+  "preceding_hosted_ci": "https://github.com/racostacme-come/structural-verification-lab/actions/runs/41355573259",
+  "limitations": [
+    "Synthetic numerical verification; no physical validation.",
+    "Transient contact continuum convergence not established.",
+    "Global reaction accuracy does not imply local displacement accuracy.",
+    "Dense small-problem solvers; no performance claim."
+  ]
+}

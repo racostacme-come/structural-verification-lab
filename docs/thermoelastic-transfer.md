@@ -1,9 +1,11 @@
 # Thermoelastic transfer: research contract
 
-**1 November status:** The four-page [thermoelastic synthesis](../paper/paper.pdf)
-and [source](../paper/paper.tex) now cover the coupled results. The text below
-retains the milestone chronology; future-tense manuscript/refinement statements
-describe that earlier date. Release remains subject to acceptance review.
+**2 November status:** The four-page [thermoelastic synthesis](../paper/paper.pdf)
+and [source](../paper/paper.tex) cover the completed coupled studies. The
+[day-7 acceptance review](../validation/release-acceptance.md) maps all nine
+criteria to evidence and defines final publication gates. The text below
+retains the milestone chronology; future-tense implementation, manuscript and
+refinement statements describe that earlier date, not missing current work.
 
 Status 30 October, calendar day 4: baseline, conservative heat/contact,
 [native C++17 assembly](native-thermoelastic.md) and

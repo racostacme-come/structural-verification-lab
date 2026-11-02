@@ -1,22 +1,22 @@
 # Seven-day major-project cycle
 
-Active cycle: **thermoelastic transfer**, started 27 October 2026; current day 6,
-1 November. Numerical implementation and independent refinement/contact evidence
-are complete. The four-page thermoelastic synthesis replaces the current paper;
-the released beam synthesis remains at v0.1.0. Tables and summary measurements
-are generated from versioned results, with strict source/PDF hash gates and
-13 manuscript acceptance/mutation tests. Local Tectonic pages are all reviewed.
-No contribution is backdated to the missed 28 October milestone.
+Thermoelastic transfer reached day-7 acceptance on 2 November 2026, after the
+cycle begun 27 October. All numerical methods, independent studies and the
+original four-page synthesis are complete. The release candidate includes a
+[nine-criterion acceptance matrix](validation/release-acceptance.md), measured
+[JSON evidence](validation/release-acceptance.json) and [changelog](CHANGELOG.md).
 
-Target finish 2 November, allowed window 31 October-4 November. Next: review
-hosted Linux/Windows/manuscript artifacts and complete acceptance review; merge
-and release only when every gate passes. Days 8-9 are for justified repairs.
-See the [research contract](docs/thermoelastic-transfer.md) for thresholds and
-[day-6 validation](validation/manuscript-day6.md) for exact evidence.
+The final candidate must pass Linux, Windows and manuscript CI before merge;
+the merge tree must match the tested tree before v0.2.0 publication. The v0.1.0
+beam study and imported source provenance remain preserved. No contribution
+is backdated to 28 October.
 
-This release consolidates existing work; its historical development is not portrayed as seven new days of work.
+After release, rotate to Transport Verification Lab and record its next
+original seven-day research question in the series portfolio. Retain this
+Structural cycle if any release gate fails; 3-4 November are available only
+for justified repair, with an explicit blocker/recovery plan on day 9.
 
-Future substantive extensions use a seven-day target, with a permitted 5–9-day window:
+Future substantive extensions use a seven-day target, with a permitted 5â€“9-day window:
 1. State research question, acceptance criteria and shared-model assumptions.
 2. Implement the first numerical improvement and independent oracle.
 3. Integrate the second component and test interface failure cases.
@@ -25,4 +25,4 @@ Future substantive extensions use a seven-day target, with a permitted 5–9-day
 6. Draft and compile the <=5-page paper, reproduce figures and inspect pages.
 7. Release after evidence review; document limitations and next questions.
 
-Days 8–9 are reserved for justified fixes. A missed acceptance criterion blocks a completed-release claim. Each day must record a meaningful contribution and push the corresponding branch. The series portfolio tracks the active cycle.
+Days 8â€“9 are reserved for justified fixes. A missed acceptance criterion blocks a completed-release claim. Each day must record a meaningful contribution and push the corresponding branch. The series portfolio tracks the active cycle.

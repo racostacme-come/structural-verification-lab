@@ -6,10 +6,10 @@ This major project integrates 6 previously independent research implementations 
 
 ## Start here
 
-An original [thermoelastic-transfer study](docs/thermoelastic-transfer.md) is
-in progress (27 October-2 November target). Day 1 provides an independent
-restrained-bar continuum oracle, Python FE baseline, analytical patches and
-four-level displacement interpolation study. Run `python -m thermomechanics`
+The original [thermoelastic-transfer study](docs/thermoelastic-transfer.md)
+connects an independent restrained-bar continuum oracle, Python FE baseline,
+analytical patches and four-level displacement interpolation study with
+transient heat and nonmatching mesh transfer. Run `python -m thermomechanics`
 after setup; [versioned baseline](results/thermoelastic-baseline.json).
 Conservative heat/contact and the [C++17 assembly backend](docs/native-thermoelastic.md)
 are implemented. [Conservative nonmatching transfer and the coupled CLI](docs/coupled-transfer.md)
@@ -19,7 +19,9 @@ with a 45-case contact/material sweep and explicit local-displacement limitation
 The four-page [thermoelastic synthesis](paper/paper.pdf) now connects these
 measured studies, with [source](paper/paper.tex) and generated evidence tables.
 The [released beam synthesis](https://github.com/racostacme-come/structural-verification-lab/blob/v0.1.0/paper/paper.pdf)
-remains available at v0.1.0. Release acceptance review is scheduled for 2 November.
+remains available at v0.1.0. The [v0.2.0 acceptance review](validation/release-acceptance.md)
+maps all nine research criteria to measured evidence and states the remaining
+physical and numerical limits. See the [changelog](CHANGELOG.md) for scope.
 
 Python 3.11+ (CI uses 3.12), Git, internet for initial dependency installation, and a C++17 compiler are required. On Windows use Visual Studio 2022 with Desktop development with C++ and a Windows SDK. On Linux use GCC or Clang. Use a fresh virtual environment.
 
@@ -86,4 +88,5 @@ The original [conservative heat/contact solver](docs/thermal-contact.md) adds
 backward Euler conduction, independent energy/flux checks and separate temporal
 and spatial refinement studies. Reproduce with
 `python -m thermomechanics.heat_experiment`. The current synthesis describes
-the thermoelastic extension; the new release remains gated on acceptance review.
+the thermoelastic extension; [release evidence](validation/release-acceptance.md)
+distinguishes supplied-field agreement from continuum and physical validity.
