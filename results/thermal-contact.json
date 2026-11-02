@@ -1,0 +1,79 @@
+{
+  "scope": "Synthetic verification only; no coupled transfer or physical validation",
+  "source_sha256": {
+    "thermomechanics/heat.py": "153d15b144bfbbd370c26c9f476aa3a805a3c9d16fe148da55003170bae869ea",
+    "thermomechanics/heat_experiment.py": "cf63dd2d9edfcd9e40ddc51fca6d129239ddda0a4ad247b2cf97550f0765961b"
+  },
+  "contact": [
+    {
+      "resistance_m2_K_per_W": 0.0,
+      "reference_rate_W": 35.0,
+      "max_relative_rate_error": 2.0301221021717148e-16,
+      "transient_energy_residual_J": -8.881784197001252e-16
+    },
+    {
+      "resistance_m2_K_per_W": 1e-10,
+      "reference_rate_W": 34.99999998249999,
+      "max_relative_rate_error": 4.0602442063735527e-16,
+      "transient_energy_residual_J": 1.2323475573339238e-14
+    },
+    {
+      "resistance_m2_K_per_W": 0.3,
+      "reference_rate_W": 14.0,
+      "max_relative_rate_error": 7.61295788314393e-16,
+      "transient_energy_residual_J": 3.774758283725532e-15
+    },
+    {
+      "resistance_m2_K_per_W": 100000.0,
+      "reference_rate_W": 6.999986000028e-05,
+      "max_relative_rate_error": 4.908845509892062e-10,
+      "transient_energy_residual_J": -3.3306690738754696e-15
+    }
+  ],
+  "temporal_against_semidiscrete": [
+    {
+      "steps": 10,
+      "dt_s": 0.01,
+      "error_K": 0.0171880412042848
+    },
+    {
+      "steps": 20,
+      "dt_s": 0.005,
+      "error_K": 0.008766052499228183,
+      "observed_order": 0.971405916557541
+    },
+    {
+      "steps": 40,
+      "dt_s": 0.0025,
+      "error_K": 0.004427598841937719,
+      "observed_order": 0.9854028049475329
+    },
+    {
+      "steps": 80,
+      "dt_s": 0.00125,
+      "error_K": 0.0022251475353674555,
+      "observed_order": 0.9926235189587507
+    }
+  ],
+  "spatial_exact_semidiscrete_against_continuum_cell_average": [
+    {
+      "cells": 8,
+      "error_K": 0.0046120868038370885
+    },
+    {
+      "cells": 16,
+      "error_K": 0.0011745794446683057,
+      "observed_order": 1.9732753703602244
+    },
+    {
+      "cells": 32,
+      "error_K": 0.00029499965902591847,
+      "observed_order": 1.9933591037153215
+    },
+    {
+      "cells": 64,
+      "error_K": 7.38347057568125e-05,
+      "observed_order": 1.9983422721320685
+    }
+  ]
+}

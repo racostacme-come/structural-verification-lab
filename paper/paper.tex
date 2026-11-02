@@ -1,44 +1,120 @@
 \documentclass[10pt,a4paper]{article}
-\usepackage[margin=22mm]{geometry}
-\usepackage{amsmath,booktabs,hyperref}
-\hypersetup{colorlinks=true,urlcolor=blue}
-\title{Structural Verification Lab:\\A Reproducible Integration of Numerical Research Modules}
-\author{}
-\date{21 October 2026}
+\usepackage[margin=19mm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,hyperref}
+\hypersetup{colorlinks=true,urlcolor=blue,citecolor=blue}
+\setlength{\parskip}{2pt}
+\input{measurements.tex}
+\title{Conserved Thermal Strain, Accurate Reactions,\\and Remaining Displacement Error}
+\author{Structural Verification Lab}
+\date{1 November 2026}
 \begin{document}
 \maketitle
 \begin{abstract}
-Can a shared material and geometry definition expose inconsistent error levels between static beam compliance and elastic buckling? This software-methods paper consolidates 6 existing research implementations into a self-contained laboratory and adds a connected numerical experiment. Source snapshots, licenses, tests and original papers are retained with commit-level provenance and file hashes. The contribution is explicit interface verification and reproducible orchestration, rather than a new numerical method or a claim of physical validation. The reported experiment distinguishes shared-model consistency from numerical error and documents where component assumptions prevent further automatic coupling.
+How do thermal contact resistance and transfer between nonmatching meshes affect a restrained two-material bar? An original, reproducible software study connects conservative finite-volume heat conduction, exact overlap integration of thermal strain, and C++17 linear finite-element assembly. Independent reference problems separate implementation agreement, time error, smooth-field spatial error, and reconstruction error. Four-level studies recover first-order backward Euler and second-order smooth-field spatial convergence. A 45-case steady contact/property sweep gives nearly exact reactions while retaining local displacement error. Thus conservation of the integral controlling reaction force does not certify the local temperature reconstruction. These are synthetic numerical verification results, not physical validation or a new discretization claim.
 \end{abstract}
-\section{Research scope and architecture}
-Beam discretization, stability, nonlinear equilibrium, plasticity, adaptive meshes and boundary enforcement. The included implementations are shearscope, bucklemap, foldtrace, yieldledger, meshbeacon, boundarybalance~\cite{m0,m1,m2,m3,m4,m5}. Each remains a separately installable Python package; native C++ kernels retain their package-specific interfaces. The root runner builds the modules, executes tests in separate processes, checks imported file hashes and produces the new integration report. This process avoids test-module name collisions and makes failed checks visible instead of treating a directory collection as validated integration.
-\section{Governing model and connecting assumptions}
-For a uniform cantilever of length $L$, bending rigidity $EI$ and shear rigidity $S=\kappa GA$, the small-displacement tip compliance under a unit force is
-\[
-C_T=\frac{L^3}{3EI}+\frac{L}{S}.
-\]
-The Euler--Bernoulli cantilever critical load is $P_E=\pi^2EI/(4L^2)$. These different beam theories share a bending-only scalar identity,
-\[
-\frac{P_E}{L}\left(C_T-\frac{L}{S}\right)=\frac{\pi^2}{12}.
-\]
-Subtracting the shear term is essential: the identity does not equate the complete stiffness matrices or establish a shear-deformable buckling theory. ShearScope supplies full- and reduced-quadrature Timoshenko compliance; BuckleMap supplies Hermite finite-element Euler loads.
-\section{Reproducible experiment}
-The original implementations are reused through public Python APIs, including their separately compiled C++ element kernels. The new adapter creates a one-metre cantilever with width 0.02 m, height 0.01 m, Young's modulus 70 GPa, Poisson ratio 0.3 and shear correction 5/6. Both solvers receive the same length and bending rigidity. Four meshes (4, 8, 16 and 32 elements) are compared. Static error uses the independent closed-form Timoshenko compliance; load error uses the Euler cantilever formula. The product check measures cross-model parameter consistency. Run \texttt{python suite.py experiment} after installing the suite to regenerate the machine-readable results. All table entries below are generated from that report; no numerical result is copied from a component paper. Component source commits and per-file hashes are stored in the suite manifest. The experiment and integration test are versioned alongside this manuscript.
-\section{Measured integration results}
-\input{../results/table.tex}
-The recorded study shows much slower improvement of compliance than of the Hermite buckling load. Full shear quadrature remains severely locked on the slender-beam meshes, even though the buckling result is accurate. Agreement of one output therefore does not certify another solver's approximation. Reduced quadrature recovers the expected bending-compliance limit in this example. FoldTrace, YieldLedger, MeshBeacon and BoundaryBalance retain separate nonlinear, constitutive, adaptive and boundary-verification studies under the shared runner; their assumptions are not inserted into this elastic identity.
-\section{Verification and limitations}
-The root test command runs each component's Python tests and the shared-model contract tests, recording return codes and complete output. Independent tests check modulus and geometric scaling, and refinement toward the analytical beam limits at slenderness ratios 20 and 100. C++ extensions are compiled during installation. A separate \texttt{native} command builds and executes the four C++17 invariant tests through CTest. Cross-platform CI runs both test commands; sanitizer, distribution and full historical reproduction campaigns are outside this gate. The paper build rejects unresolved references, overfull boxes and manuscripts over five pages. Imported bytes use explicit file hashes; a documented line-ending repair and one attributes-file patch make the provenance gate portable without changing numerical source.
+\section{Question, scope and governing model}
+The study extends the existing Structural Verification Lab; its six imported component snapshots and original beam study remain available with pinned provenance~\cite{code}. The new research question concerns one-way thermal-to-mechanical coupling, motivated by heat/interface-resistance topics in DTU Modelling in Materials and Manufacturing Engineering and eligible TUM finite-element topics. No private course files, exercise data or teaching code are distributed.
 
-The common experiment is linear, slender and uniform, with ideal clamping. It does not connect plasticity to buckling, trace post-buckling branches, establish nonlinear stability, or validate a physical beam. Refinement evidence applies to the chosen meshes and material scaling. The imported modules support additional independent experiments, but their historical results are not new integration measurements.
+Consider a bar on $[0,L]$ with constant area $A$, piecewise constant conductivity $k$, volumetric heat capacity $c$, Young's modulus $E$, and expansion coefficient $\alpha$. Let $\theta=T-T_{\rm ref}$ be the increment from a stress-free temperature. With no distributed axial force, the governing equations and an independent compatibility identity are
+\begin{align}
+ c A\dot T-\partial_x(kA\partial_x T)&=A s, & N'&=0,\label{eq:heat}\\
+ N=EA(u'-\alpha\theta),\qquad
+ N&=\frac{u_R-u_L-\int_0^L\alpha\theta\,dx}{\int_0^L(EA)^{-1}\,dx}.\label{eq:force}
+\end{align}
+Positive $N$ denotes tension, and support forces on the bar are $(-N,N)$. Displacement follows by integrating $N/(EA)+\alpha\theta$ from the left support. Thermal contact has areal resistance $R\geq0$ in m$^2$ K/W and jump $T^- -T^+=q''R$ for positive rightward heat flux $q''$. Mechanical bonding remains perfect: temperature may jump but displacement does not. Both restrained and traction-free mechanical endpoints are supported.
+
+The assumptions are small strain, quasi-static linear elasticity, positive constant material properties within each cell/element, and prescribed heat sources or boundary temperatures. There is no mechanical inertia, thermal feedback from deformation, latent heat, plasticity, contact opening, or temperature-dependent constitutive response. Conductivities and capacities in the smooth transient experiment are deliberately synthetic; they are not identified material data.
+
+\section{Connected discretization and conservation contract}
+Cell-centred heat unknowns represent cell averages. For neighbouring cells of lengths $h_i,h_{i+1}$, the conductance and backward-Euler update are
+\begin{equation}
+ g_{i+1/2}=\frac{A}{h_i/(2k_i)+R_{i+1/2}+h_{i+1}/(2k_{i+1})},\qquad
+ (M+\Delta t H)T^{n+1}=MT^n+\Delta t b^{n+1},\label{eq:fv}
+\end{equation}
+where $M_{ii}=c_iAh_i$, $H$ is the resistance-network matrix, and $b$ includes sources and boundary contributions. Shared face rates cancel in the global energy balance. This construction uses standard finite-volume conservation principles~\cite{fv}.
+
+For thermal cells $I_i$ and mechanical elements $J_e$, exact interval overlaps define the transferred element mean,
+\begin{equation}
+ \bar\theta_e=|J_e|^{-1}\sum_i |I_i\cap J_e|\theta_i,
+ \qquad \sum_e\alpha_e|J_e|\bar\theta_e=\int_0^L\alpha(x)\theta_h(x)\,dx.\label{eq:overlap}
+\end{equation}
+This is a one-dimensional, piecewise-constant instance of conservative mesh transfer; general mesh projection is established work~\cite{transfer}. Mechanical material jumps must be mechanical nodes and thermal faces. Both meshes share identical endpoints and constant area. A purely thermal contact face may lie inside a mechanical element. These explicit alignment conditions make the material-weighted identity valid without smoothing a temperature jump.
+
+For a constant-property P1 element of length $\ell_e$,
+\begin{equation}
+ K_e=\frac{E_eA}{\ell_e}\begin{bmatrix}1&-1\\-1&1\end{bmatrix},\qquad
+ f_e^{\rm th}=E_eA\alpha_e\bar\theta_e\begin{bmatrix}-1\\1\end{bmatrix}.\label{eq:fe}
+\end{equation}
+The original C++17 kernel assembles stiffness and thermal load through a C ABI. Python owns arrays, applies boundary elimination including nonzero prescribed displacements, and solves with NumPy. Heat operators, overlap integration and reference solvers also remain in Python. There is no speedup claim. Since $N$ in Eq.~\eqref{eq:force} depends on one global eigenstrain integral, exact transfer can recover its value for a supplied cell field while leaving local reconstruction error in $u(x)$.
+
+\section{Independent references and separated refinement studies}
+All values below come from versioned experiment JSON, with tables generated automatically. The bar has $L=1$ m, $A=2\times10^{-4}$ m$^2$, and a material interface at $x=0.4$ m. Unless varied explicitly, $(E_1,E_2)=(70,190)$ GPa and $(\alpha_1,\alpha_2)=(23,11)\times10^{-6}$ K$^{-1}$. Both mechanical ends are fixed. The mechanical mesh has three left and five right elements.
+
+For smooth refinement, take insulated heat boundaries, $k=c=1$ in SI units, zero contact resistance, and initial increment $40\cos(\pi x)$ K. Heat initial data are exact cell averages; the continuum solution is $40e^{-\pi^2t}\cos(\pi x)$ at $t=0.1$ s. Distinct expansion coefficients ensure that its zero unweighted mean still produces a nonzero reaction. Analytic sine antiderivatives provide continuum force and displacement independently of transfer and assembly; Gaussian quadrature separately checks these integrals.
+
+The temporal experiment fixes 20 heat cells and compares backward Euler with exact semidiscrete evolution obtained by diagonalizing $M^{-1/2}HM^{-1/2}$. The reference shares the spatial heat operator, so this comparison isolates time error, not heat spatial error. An unequal-mass two-cell closed form and the uniform-grid cosine eigenvalue independently check the spectral solver. The spatial experiment uses this exact semidiscrete evolution on 10--80 cells and compares with continuum cell averages and analytic mechanics. Thus time error cannot contaminate its measured spatial order.
+
+\input{refinement-table.tex}
+\noindent Table 1. Maximum temperature error $e_T$, maximum element force error $e_N$, and maximum error at mechanical nodes $e_u$. Time rows count steps; space rows count cells. $p_T=\log_2(e_{T,\rm coarse}/e_{T,\rm fine})$.
+
+Temporal force and nodal orders also approach one (0.9714, 0.9854, 0.9926). Spatial force and nodal orders are approximately 2.0008, 2.0002 and 2.0001. These orders apply to this smooth, zero-contact problem. The fixed mechanical mesh retains between-node P1 interpolation error; nodal convergence does not measure its removal. A separate affine-temperature mechanics study recovers the exact midpoint interpolation error $\alpha\beta h^2/8$ for $\theta=\beta x$.
+
+\newpage
+\section{Transfer, thermal contact and the global--local distinction}
+\paragraph{Frozen-field transfer.}
+Fix 7+11 thermal cells, with $\theta=80-50x$ K at left cell centres and $\theta=10+20x$ K at right cell centres. Reconstruct these values as constants on their cells and refine only the mechanical target grid. The independent source-cell integral is $0.0008024$ m and its reaction is $-18088$ N. The comparison baseline linearly interpolates cell-centre values at element midpoints, bridging the jump and clamping beyond the end centres; it represents a different field.
+\input{transfer-table.tex}
+\noindent Table 2. Material-weighted integral error is normalized by the sum of absolute source-cell strain integrals (floor $10^{-12}$ m). Force errors are relative to the source-field reference.
+
+Overlap preserves the controlling integral to roundoff. The naive baseline is also accurate on the two coarse grids because of cancellation, then reaches about 0.53\% force error. This nonmonotone result is retained: no universal superiority or convergence rate is inferred from these four points.
+
+\paragraph{Transient contact demonstration.}
+Use the same 18 heat cells and eight mechanical elements, $(k_1,k_2)=(13,4)$ W/(m K), $(c_1,c_2)=(2,3)\times10^5$ J/(m$^3$ K), $T_{\rm ref}=293.15$ K, and an initially uniform reference temperature. Fix end temperatures to 373.15 and 293.15 K; run twenty 500 s steps for each $R\in\{0,0.02,2\}$ m$^2$ K/W. At 10000 s the computed compressive forces are respectively $-19136.55$, $-18692.40$ and $-16690.30$ N. These are discrete model outputs, not converged transient contact predictions. Across 60 steps, the maximum source-field force error is \MaxSourceForceError{} on scale $\max(1\,{\rm N},|N_{\rm ref}|)$; the energy defect is \MaxEnergyError{} on scale $\max(1\,{\rm J},|\Delta U|,|Q_{\rm boundary}\Delta t|)$. The mechanics reference integrates original thermal cells, independently of transferred means.
+
+\paragraph{Steady contact/property sweep.}
+To separate contact physics from time error, impose boundary increments 80 and 0 K and compute steady solutions on the same grids. Vary $k_2/k_1$ and $E_2/E_1$ independently over $\{0.1,1,10\}$ with $k_1=13$ W/(m K), $E_1=70$ GPa, and five resistances. The 45 cases use the independent series-resistance solution
+\begin{equation}
+ q''=\frac{80}{0.4/k_1+R+0.6/k_2},\qquad Q=Aq'',\qquad [T]=q''R.\label{eq:contact}
+\end{equation}
+Integrating each material's affine temperature in Eq.~\eqref{eq:force} provides an independent continuum mechanics reference.
+\input{contact-table.tex}
+\noindent Table 3. Worst errors across nine property pairs at each resistance. The displacement column is an absolute nodal error, not an equilibrium residual.
+
+Near-exact global reactions coexist with nodal error up to \MaxContactDisplacement{} m. On these uniform-within-material heat grids, full material integrals of an affine field are exact, but partial integrals ending inside a thermal cell are not. High-resistance boundary rates lose relative accuracy through subtraction of nearly equal temperatures; the maximum heat-matrix condition number is \MaxContactCondition{}. This bounded sweep does not establish the infinite-resistance limit.
+
+\section{Reproducibility, evidence and limitations}
+The original extension lives in \texttt{thermomechanics/} and \texttt{native/}. Python dataclasses enforce SI material and mesh contracts; the C ABI checks native buffer dimensions. The existing six component snapshots remain byte-checked against \texttt{suite.json}. Their original histories and licenses are preserved. The original integration code and new extension are MIT licensed. The earlier beam synthesis remains available at the v0.1.0 tag~\cite{code}; component papers are supporting studies, not substitutes for this synthesis.
+
+From the repository root, create a Python environment and run the following commands. The README supplies compiler setup and a short native-build-path option for Windows. A working C++17 toolchain is required; a missing native library fails explicitly.
+
+\noindent\begin{minipage}{\linewidth}
+\begin{verbatim}
+python suite.py install
+python suite.py verify
+python suite.py native
+python suite.py test
+python -m thermomechanics.coupled_experiment
+python -m thermomechanics.refinement_experiment
+python manuscript.py --write-tables
+python suite.py paper --engine tectonic
+python manuscript.py
+\end{verbatim}
+\end{minipage}
+
+The numerical baseline is revision \texttt{c87b8203bec3}~\cite{code}. The coupled and refinement JSON files record complete inputs, all histories/cases and normalized-LF SHA-256 hashes of Python/native sources. The paper build checks those source hashes and refuses stale generated tables before compiling. Its manifest binds the manuscript, generator, build runner, numerical evidence, all numerical sources, snapshot manifest and resulting PDF. It rejects unresolved references, overfull boxes and more than five pages. CI independently compiles with pdfLaTeX and uploads the PDF, log and manifest. Hash equality establishes provenance; it does not replace independent numerical checks or visual page review.
+
+The preceding numerical revision passed 368 Python checks and five native CTests locally and on Linux and Windows. Both hosted numerical artifacts were downloaded and checked against their reported digests. These counts describe that numerical revision; the manuscript change adds separate stale-evidence mutation checks. The full suite checks free expansion, uniform restraint, nonzero prescribed endpoints, Python/C++ assembly agreement, energy balance, independent force identities and experiment reproduction. Cross-platform tolerances account for small floating-point residuals. For the steady sweep, relative force and scaled temperature gates are $10^{-11}$; heat-rate tolerance is $10^{-10}$ except $2\times10^{-7}$ at $R=10^5$ m$^2$ K/W. The smooth-order gates are 0.95--1.02 in time and 1.9--2.1 in space.
+
+Four kinds of evidence must remain distinct. First, Python/C++ and transfer checks test implementation consistency. Second, time error is measured against the same semidiscrete operator. Third, smooth spatial and steady contact cases use independent continuum references. Fourth, physical validity would require independently justified constitutive data and experiments; none are claimed. In particular, the heterogeneous transient contact demonstration has no continuum refinement result here. The steady and smooth transient studies cover complementary parts of the model and cannot be combined into that missing claim.
+
+The implementation uses dense heat and mechanics solves and a dense overlap matrix. It targets small verification problems, with no large-scale performance, nonlinear response or arbitrary-interface convergence guarantee. Exact reaction force is insufficient as a sole acceptance metric: local displacement, supplied-field consistency, energy balance and independent continuum errors reveal different failures. A future extension could test transient continuum contact accuracy with independent interface eigenmodes, but that remains outside this release's evidence.
+
 \section{Conclusion}
-The integrated repository supplies a common execution and evidence interface while preserving the assumptions that make each numerical component interpretable. The connected experiment makes a specific cross-component contract testable. Further coupling should be treated as new research work, with independently derived reference cases and a revised paper, rather than inferred from successful package installation.
-\begin{thebibliography}{9}
-\bibitem{m0} shearscope. Versioned implementation and numerical study. \url{https://github.com/racostacme-come/shearscope}. Exact imported commit recorded in \texttt{suite.json}.
-\bibitem{m1} bucklemap. Versioned implementation and numerical study. \url{https://github.com/racostacme-come/bucklemap}. Exact imported commit recorded in \texttt{suite.json}.
-\bibitem{m2} foldtrace. Versioned implementation and numerical study. \url{https://github.com/racostacme-come/foldtrace}. Exact imported commit recorded in \texttt{suite.json}.
-\bibitem{m3} yieldledger. Versioned implementation and numerical study. \url{https://github.com/racostacme-come/yieldledger}. Exact imported commit recorded in \texttt{suite.json}.
-\bibitem{m4} meshbeacon. Versioned implementation and numerical study. \url{https://github.com/racostacme-come/meshbeacon}. Exact imported commit recorded in \texttt{suite.json}.
-\bibitem{m5} boundarybalance. Versioned implementation and numerical study. \url{https://github.com/racostacme-come/boundarybalance}. Exact imported commit recorded in \texttt{suite.json}.
+The connected Python/C++ pipeline makes the thermal-strain conservation contract explicit and testable. Its measured results support first-order time accuracy, second-order smooth spatial accuracy, and bounded steady-contact verification under the stated assumptions. Most significantly for verification practice, accurate global reactions survive a reconstruction that still produces local displacement error. The reproducible evidence therefore treats global conservation as one necessary check within a broader error analysis.
+
+\begin{thebibliography}{9}\small
+\bibitem{fv} R. Eymard, T. Gallou\"et and R. Herbin. Finite volume methods. \emph{Handbook of Numerical Analysis}, vol. 7, 2000. Author reference: \url{https://perso.math.u-pem.fr/reymard/}.
+\bibitem{transfer} P. E. Farrell and J. R. Maddison. Conservative interpolation between volume meshes by local Galerkin projection. \emph{Computer Methods in Applied Mechanics and Engineering} 200(1--4), 89--100, 2011. \href{https://doi.org/10.1016/j.cma.2010.07.015}{doi:10.1016/j.cma.2010.07.015}.
+\bibitem{code} Structural Verification Lab. Original numerical baseline, revision \texttt{c87b8203bec3}, 31 October 2026; earlier beam synthesis at tag v0.1.0. \url{https://github.com/racostacme-come/structural-verification-lab}. Exact source/data hashes accompany this manuscript.
 \end{thebibliography}
 \end{document}
